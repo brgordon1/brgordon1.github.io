@@ -4,7 +4,7 @@ collection: publications
 category: journal
 permalink: /publication/2021-inefficiencies-digital-advertising
 excerpt: 'Digital advertising is a large and rapidly growing industry, but there is growing concern about its efficiency.'
-date: 2021
+date: 2021-01-01
 venue: 'Journal of Marketing'
 paperurl: 'https://journals.sagepub.com/doi/abs/10.1177/0022242920962726'
 citation: 'Gordon, B. R., Jerath, K., Katona, Z., Narayanan, S., Shin, J., & Wilbur, K. C. (2021). &quot;Inefficiencies in Digital Advertising Markets.&quot; <i>Journal of Marketing</i>. 85(1), 7-25.'

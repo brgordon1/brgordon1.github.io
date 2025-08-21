@@ -10,7 +10,6 @@ redirect_from:
 {% include base_path %}
 
 
-
 Education
 ======
 * Ph.D in Economics, Carnegie Mellon University, 2007

@@ -4,7 +4,7 @@ collection: publications
 category: journal
 permalink: /publication/2013-advertising-effects-presidential
 excerpt: 'This paper investigates the effects of television advertising in presidential elections.'
-date: 2013
+date: 2013-01-01
 venue: 'Marketing Science'
 paperurl: 'https://pubsonline.informs.org/doi/abs/10.1287/mksc.1120.0743'
 citation: 'Gordon, B. R. & Hartmann, W. (2013). &quot;Advertising Effects in Presidential Elections.&quot; <i>Marketing Science</i>. 32(1), 19-35.'

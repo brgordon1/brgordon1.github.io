@@ -4,7 +4,7 @@ collection: publications
 category: working-paper
 permalink: /publication/2023-predictive-incrementality-pie
 excerpt: 'The measurement of advertising effectiveness is a central problem in marketing.'
-date: 2023
+date: 2023-07-01
 venue: 'Working Paper, available at arXiv'
 paperurl: 'https://arxiv.org/abs/2304.06828'
 citation: 'Gordon, B. R., Moakler, R., & Zettelmeyer, F. (2023). &quot;Predictive Incrementality by Experimentation (PIE) for Ad Measurement.&quot; <i>arXiv preprint arXiv:2304.06828</i>.'

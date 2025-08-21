@@ -4,7 +4,7 @@ collection: publications
 category: journal
 permalink: /publication/2023-disentangling-ad-tone-effects
 excerpt: 'A long-standing debate in political science concerns the effects of negative advertising.'
-date: 2023
+date: 2023-01-01
 venue: 'Management Science'
 paperurl: 'https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2022.4410'
 citation: 'Gordon, B. R., Lovett, M. J., Luo, B., & Reeder, J. C. (2023). &quot;Disentangling Ad Tone Effects on Voter Turnout and Candidate Choice in Presidential Elections.&quot; <i>Management Science</i>. 69(1), 220-243.'

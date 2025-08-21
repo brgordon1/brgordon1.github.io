@@ -4,7 +4,7 @@ collection: publications
 category: journal
 permalink: /publication/2013-price-elasticity-economic-growth
 excerpt: 'This study investigates how consumer price sensitivity for consumer packaged goods changes over the business cycle.'
-date: 2013
+date: 2013-02-01
 venue: 'Journal of Marketing Research'
 paperurl: 'https://journals.sagepub.com/doi/abs/10.1509/jmr.10.0223'
 citation: 'Gordon, B. R., Goldfarb, A., & Li, Y. (2013). &quot;Does Price Elasticity Vary with Economic Growth? A Cross-Category Analysis.&quot; <i>Journal of Marketing Research</i>. 50(1), 4-23.'

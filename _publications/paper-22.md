@@ -4,7 +4,7 @@ collection: publications
 category: journal
 permalink: /publication/2024-multicell-experiments
 excerpt: 'The average treatment effect (ATE) from an A/B test is the standard for measuring the causal impact of an intervention such as an ad campaign.'
-date: 2024
+date: 2025-01-01
 venue: 'Management Science'
 paperurl: 'https://arxiv.org/abs/2302.13857'
 citation: 'Waisman, C. & Gordon, B. R. (2024). &quot;Multicell experiments for marginal treatment effect estimation of digital ads.&quot; <i>Management Science</i>. (forthcoming).'

@@ -4,7 +4,7 @@ collection: publications
 category: journal
 permalink: /publication/2011-does-amd-spur-intel
 excerpt: 'We develop a dynamic equilibrium model of competition in the market for computer processors that allows for endogenous product innovation and quality-contingent consumer adoption.'
-date: 2011
+date: 2011-12-01
 venue: 'Journal of Political Economy'
 paperurl: 'https://www.journals.uchicago.edu/doi/abs/10.1086/661921'
 citation: 'Goettler, R. L. & Gordon, B. R. (2011). &quot;Does AMD spur Intel to innovate more?.&quot; <i>Journal of Political Economy</i>. 119(6), 1141-1200.'
