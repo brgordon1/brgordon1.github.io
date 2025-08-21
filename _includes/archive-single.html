@@ -56,6 +56,8 @@
       <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
     {% elsif post.citation and post.paperurl and post.slidesurl %}
       <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a></p>
+    {% elsif post.preprinturl and post.paperurl %}
+      <p><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.preprinturl }}">Preprint (PDF)</a></p>
     {% elsif post.citation and post.paperurl and post.bibtexurl %}
       <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
     {% elsif post.citation and post.paperurl %}
@@ -79,8 +81,6 @@
     {% elsif post.bibtexurl %}
       <p><a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
        {% comment %} --- Link for the preprint --- {% endcomment %}
-    {% elsif post.preprint_url and post.paperurl %}
-      <p><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.preprint_url }}">Preprint (PDF)</a></p>
     {% endif %}
 
   </article>
