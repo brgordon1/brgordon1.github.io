@@ -4,7 +4,7 @@ collection: publications
 category: journal
 permalink: /publication/2008-01-01-paper-title-number-1
 excerpt: "This paper is about measuring the long-run effects of marketing actions and their strategic implications."
-date: 2008
+date: 2008-12-01
 venue: 'Marketing Letters'
 paperurl: 'https://link.springer.com/article/10.1007/s11002-008-9053-7'
 citation: |
