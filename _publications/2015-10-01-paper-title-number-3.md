@@ -1,14 +1,13 @@
 ---
-title: "Paper Title Number 3"
+title: "A New Approach to Estimating the Production Function for Housing"
 collection: publications
-category: manuscripts
-permalink: /publication/2015-10-01-paper-title-number-3
-excerpt: 'This paper is about the number 3. The number 4 is left for future work.'
-date: 2015-10-01
-venue: 'Journal 1'
-slidesurl: 'http://academicpages.github.io/files/slides3.pdf'
-paperurl: 'http://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2015). &quot;Paper Title Number 3.&quot; <i>Journal 1</i>. 1(3).'
+category: journal
+permalink: /publication/2010-estimating-production-function-housing
+excerpt: 'This paper develops a new approach to estimating the production function for housing.'
+date: 2010
+venue: 'American Economic Review'
+paperurl: 'https://www.aeaweb.org/articles?id=10.1257/aer.100.3.905'
+citation: 'Epple, D., Gordon, B. R., & Sieg, H. (2010). &quot;A New Approach to Estimating the Production Function for Housing.&quot; <i>American Economic Review</i>. 100(3), 905-924.'
 ---
 
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
+This paper develops a new approach to estimating the production function for housing. We extend the traditional Rosen-Roback model by allowing for endogenous production of housing. We develop a new estimator that combines the standard hedonic approach with an instrumental variables strategy to control for the endogeneity of land prices. The main advantage of our approach is that we do not need to observe the price of land to identify the parameters of the production function. We apply our estimator to a large sample of single-family homes in the Pittsburgh metropolitan area. Our main empirical finding is that the elasticity of substitution between land and capital is close to one, implying that a Cobb-Douglas specification provides a good approximation of the production technology for housing.

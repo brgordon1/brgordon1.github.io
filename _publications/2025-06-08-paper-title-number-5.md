@@ -1,13 +1,13 @@
 ---
-title: "Paper Title Number 5, with math $$E=mc^2$$"
+title: "Competitive Strategy for Open Source Software"
 collection: publications
-category: conferences
-permalink: /publication/2024-02-17-paper-title-number-4
-excerpt: 'This paper is about a famous math equation, $$E=mc^2$$'
-date: 2024-02-17
-venue: 'GitHub Journal of Bugs'
-paperurl: 'http://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub Journal of Bugs</i>. 1(3).'
+category: journal
+permalink: /publication/2011-competitive-strategy-open-source
+excerpt: 'This paper develops a game-theoretic model to study the competitive interaction between a commercial software vendor and an open source software (OSS) community.'
+date: 2011
+venue: 'Marketing Science'
+paperurl: 'https://pubsonline.informs.org/doi/abs/10.1287/mksc.1110.0673'
+citation: 'Kumar, V., Gordon, B. R., & Srinivasan, K. (2011). &quot;Competitive Strategy for Open Source Software.&quot; <i>Marketing Science</i>. 30(6), 1066-1078.'
 ---
 
-Using [MathJax](https://www.mathjax.org/) in the description is supported - $$E=mc^2$$ - however, the use must be mindful that the default delimiters are `$$...$$` and `\\[...\\]` which differs from the `$...$` that is typically expected.
+This paper develops a game-theoretic model to study the competitive interaction between a commercial software vendor and an open source software (OSS) community. We consider a market with two types of consumers: individuals and firms. The commercial vendor chooses its investment in research and development (R&D), the price of its product, and whether to offer a basic or an advanced version of its software. The OSS community chooses its effort level to improve the quality of the OSS product. We analyze the strategic choices of the commercial vendor and the OSS community and their impact on market outcomes. We find that the commercial vendor’s optimal strategy depends on the size of the individual consumer segment and the effectiveness of the OSS community. When the individual segment is large, the commercial vendor may choose to compete with the OSS product by offering a basic version of its software at a low price. When the OSS community is effective, the commercial vendor may be forced to invest more in R&D to differentiate its product. We also analyze the welfare implications of competition between commercial and open source software.

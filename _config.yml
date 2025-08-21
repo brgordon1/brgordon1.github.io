@@ -9,9 +9,9 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Your Name / Site Title"
+title                    : "Brett R. Gordon"
 title_separator          : "-"
-name                     : &name "Your Name"
+name                     : &name "Brett R. Gordon"
 description              : &description "personal description"
 url                      : https://brgordon1.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -23,7 +23,7 @@ repository               : ""
 author:
   # Biographic information
   avatar           : "brett-gordon-kellogg-faculty-400.png"
-  name             : "Brett Gordon"
+  name             : "Brett R. Gordon"
   pronouns         : #  "he/him"
   bio              : #"Brett Gordon is an Assistant Professor at Northwestern University."
   location         : "Chicago, IL"
@@ -86,6 +86,8 @@ publication_category:
     title: 'Journal Articles'    
   conferences:
     title: 'Conference Papers'
+  working_papers:
+    title: 'Working Papers'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"

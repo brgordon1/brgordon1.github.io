@@ -1,14 +1,13 @@
 ---
-title: "Paper Title Number 2"
+title: "A Dynamic Model of Consumer Replacement Cycles in the PC Processor Industry"
 collection: publications
-category: manuscripts
-permalink: /publication/2010-10-01-paper-title-number-2
-excerpt: 'This paper is about the number 2. The number 3 is left for future work.'
-date: 2010-10-01
-venue: 'Journal 1'
-slidesurl: 'http://academicpages.github.io/files/slides2.pdf'
-paperurl: 'http://academicpages.github.io/files/paper2.pdf'
-citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).'
+category: journal
+permalink: /publication/2009-dynamic-model-consumer-replacement
+excerpt: 'This paper develops and estimates a dynamic model of consumer purchase timing decisions in the market for personal computer (PC) microprocessors.'
+date: 2009
+venue: 'Marketing Science'
+paperurl: 'https://pubsonline.informs.org/doi/abs/10.1287/mksc.1080.0461'
+citation: 'Gordon, B. R. (2009). &quot;A Dynamic Model of Consumer Replacement Cycles in the PC Processor Industry.&quot; <i>Marketing Science</i>. 28(5), 846-867.'
 ---
 
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
+This paper develops and estimates a dynamic model of consumer purchase timing decisions in the market for personal computer (PC) microprocessors. Consumers are forward looking and form expectations about the evolution of future product qualities and prices. A key feature of the model is that it allows for unobserved state dependence in the form of switching costs. Using household-level panel data on PC purchases, the model is estimated using a computationally tractable two-step estimation method. The estimates of the structural parameters are then used to analyze the determinants of the length of consumer replacement cycles and to conduct counterfactual policy experiments. The results indicate that consumers are forward looking and that quality improvements are the main driver of replacement purchases. In the counterfactual experiments, I find that a revenue-maximizing monopolist would vertically differentiate products less than is observed in the data and that this would significantly shorten the average time between consumer purchases.
