@@ -6,7 +6,7 @@ permalink: /publication/2011-competitive-strategy-open-source
 excerpt: 'This paper develops a game-theoretic model to study the competitive interaction between a commercial software vendor and an open source software (OSS) community.'
 date: 2011-11-01
 venue: 'Marketing Science'
-paperurl: 'https://pubsonline.informs.org/doi/abs/10.1287/mksc.1110.0673'
+paperurl: 'https://pubsonline.informs.org/doi/10.1287/mksc.1110.0669'
 citation: 'Kumar, V., Gordon, B. R., & Srinivasan, K. (2011). &quot;Competitive Strategy for Open Source Software.&quot; <i>Marketing Science</i>. 30(6), 1066-1078.'
 ---
 

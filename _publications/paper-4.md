@@ -6,7 +6,7 @@ permalink: /publication/2010-muth-mills-tiebout
 excerpt: 'This article analyzes and compares two alternative approaches of incorporating location-specific amenities in equilibrium models of local jurisdictions.'
 date: 2010-02-01
 venue: 'Journal of Regional Science'
-paperurl: 'https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9787.2009.00650.x'
+paperurl: 'https://onlinelibrary.wiley.com/doi/10.1111/j.1467-9787.2009.00649.x'
 citation: 'Epple, D., Gordon, B. R., & Sieg, H. (2010). &quot;Drs. Muth and Mills meet Dr. Tiebout: Integrating Location-Specific Amenities into Multi-Community Equilibrium Models.&quot; <i>Journal of Regional Science</i>. 50(1), 381-400.'
 ---
 

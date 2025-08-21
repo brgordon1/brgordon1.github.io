@@ -6,7 +6,7 @@ permalink: /publication/2009-dynamic-model-consumer-replacement
 excerpt: 'This paper develops and estimates a dynamic model of consumer purchase timing decisions in the market for personal computer (PC) microprocessors.'
 date: 2009-09-01
 venue: 'Marketing Science'
-paperurl: 'https://pubsonline.informs.org/doi/abs/10.1287/mksc.1080.0461'
+paperurl: 'https://pubsonline.informs.org/doi/10.1287/mksc.1080.0448'
 citation: 'Gordon, B. R. (2009). &quot;A Dynamic Model of Consumer Replacement Cycles in the PC Processor Industry.&quot; <i>Marketing Science</i>. 28(5), 846-867.'
 ---
 

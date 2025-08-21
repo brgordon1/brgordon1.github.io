@@ -6,7 +6,7 @@ permalink: /publication/2008-01-01-paper-title-number-1
 excerpt: "This paper is about measuring the long-run effects of marketing actions and their strategic implications."
 date: 2008-12-01
 venue: 'Marketing Letters'
-paperurl: 'https://link.springer.com/article/10.1007/s11002-008-9053-7'
+paperurl: 'https://link.springer.com/article/10.1007/s11002-008-9055-0'
 citation: |
   Bronnenberg, B., Dubé, J. P., Mela, C., Albuquerque, P., Erdem, T., Gordon, B. R., Hanssens, D., Hitsch, G., Hong, H., & Sun, B. (2008). "Measuring Long-Run Marketing Effects and Their Implications for Long-Run Marketing Decisions." <i>Marketing Letters</i>. 19, 367-382.
 ---
