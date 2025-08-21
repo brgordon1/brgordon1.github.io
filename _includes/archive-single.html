@@ -78,6 +78,9 @@
       <p><a href="{{ post.slidesurl }}">Download Slides</a></p>
     {% elsif post.bibtexurl %}
       <p><a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
+       {% comment %} --- Link for the preprint --- {% endcomment %}
+    {% elsif post.preprint_url and post.paperurl %}
+      <p><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.preprint_url }}">Preprint (PDF)</a></p>
     {% endif %}
 
   </article>
