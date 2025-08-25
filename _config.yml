@@ -33,8 +33,8 @@ author:
 
   # Academic websites
   academia         : "https://www.kellogg.northwestern.edu/faculty/directory/gordon_brett/" 
-  arxiv            : "https://arxiv.org/search/econ?query=Gordon%2C+Brett+R&searchtype=author&abstracts=show&order=-announced_date_first&size=50"
   googlescholar    : "https://scholar.google.com/citations?user=iZnvpJYAAAAJ&hl=en"
+  arxiv            : "https://arxiv.org/search/econ?query=Gordon%2C+Brett+R&searchtype=author&abstracts=show&order=-announced_date_first&size=50"
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            : "https://orcid.org/0000-0001-9081-569X"
@@ -47,7 +47,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : # "academicpages"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -62,7 +62,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "brett-gordon-977724"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -79,13 +79,13 @@ author:
   zhihu            : # Username
 
 # Publication Category - The following the list of publication categories and their headings
-publication_category:
-  journal:
-    title: 'Publications'   
-  working_papers:
+publication_category:  
+  work-in-progress:
+    title: "Work-in-Progress"
+  working_paper:
     title: 'Working Papers'
-  conferences:
-    title: 'Conference Papers'
+  journal:
+    title: 'Publications' 
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -223,12 +223,12 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
+#  portfolio:
+#    output: true
+#    permalink: /:collection/:path/
+#  talks:
+#    output: true
+#    permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site

@@ -4,7 +4,7 @@ collection: teaching
 type: "MBA course"
 permalink: /teaching/mba_retail_analytics_pricing
 venue: "Kellogg School of Management"
-#date: 2014-01-01
+#date: "2014 to present"
 location: ""
 ---
 
