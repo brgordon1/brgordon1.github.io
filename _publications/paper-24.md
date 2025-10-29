@@ -1,5 +1,5 @@
 ---
-title: "Predictive Incrementality by Experimentation (PIE) for Ad Measurement"
+title: "Predicted Incrementality by Experimentation (PIE) for Ad Measurement"
 collection: publications
 category: working-paper
 permalink: /publication/2023-predictive-incrementality-pie
