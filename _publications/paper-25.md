@@ -2,7 +2,7 @@
 title: "Characterizing and Minimizing Divergent Delivery in Meta Advertising Experiments"
 collection: publications
 category: working-paper
-permalink: /publication/2023-predictive-incrementality-pie
+permalink: /publication/2025-divergent-delivery
 excerpt: ''
 date: 2025-08-28
 venue: 'Working Paper, available at arXiv'
