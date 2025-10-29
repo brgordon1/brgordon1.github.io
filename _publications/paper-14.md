@@ -3,7 +3,7 @@ title: "Advertising Competition in Presidential Elections"
 collection: publications
 category: journal
 permalink: /publication/2016-advertising-competition-presidential
-excerpt: 'We study television advertising in recent U.S. presidential elections.'
+excerpt: ''
 date: 2016-03-01
 venue: 'Quantitative Marketing and Economics'
 paperurl: 'https://link.springer.com/article/10.1007/s11129-015-9162-7'

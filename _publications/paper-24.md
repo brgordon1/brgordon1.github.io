@@ -3,7 +3,7 @@ title: "Predicted Incrementality by Experimentation (PIE) for Ad Measurement"
 collection: publications
 category: working-paper
 permalink: /publication/2023-predictive-incrementality-pie
-excerpt: 'The measurement of advertising effectiveness is a central problem in marketing.'
+excerpt: ''
 date: 2023-07-01
 venue: 'Working Paper, available at arXiv'
 paperurl: 'https://arxiv.org/abs/2304.06828'

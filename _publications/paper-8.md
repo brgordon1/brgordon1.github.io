@@ -3,7 +3,7 @@ title: "Marketing and Politics: Models, Behavior, and Policy Implications"
 collection: publications
 category: journal
 permalink: /publication/2012-marketing-and-politics
-excerpt: 'This essay discusses the intersection of marketing and political science, highlighting how marketing models and frameworks can be applied to understand political phenomena.'
+excerpt: ''
 date: 2012-06-01
 venue: 'Marketing Letters'
 paperurl: 'https://link.springer.com/article/10.1007/s11002-012-9189-y'

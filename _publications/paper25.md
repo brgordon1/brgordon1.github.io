@@ -3,6 +3,7 @@ title: "Characterizing and Minimizing Divergent Delivery in Meta Advertising Exp
 collection: publications
 category: working-paper
 permalink: /publication/2023-predictive-incrementality-pie
+excerpt: ''
 date: 2025-08-28
 venue: 'Working Paper, available at arXiv'
 paperurl: 'https://arxiv.org/abs/2508.21251'

@@ -3,7 +3,7 @@ title: "An Empirical Study of National vs. Local Pricing by Chain Stores under C
 collection: publications
 category: journal
 permalink: /publication/2018-national-vs-local-pricing
-excerpt: 'This paper empirically investigates the pricing strategies of national chain stores, focusing on the choice between uniform national pricing and flexible local pricing.'
+excerpt: ''
 date: 2018-09-01
 venue: 'Marketing Science'
 paperurl: 'https://pubsonline.informs.org/doi/abs/10.1287/mksc.2018.1107'

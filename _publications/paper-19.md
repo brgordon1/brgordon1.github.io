@@ -3,7 +3,7 @@ title: "Digitization and Flexibility: Evidence from the South Korean Movie Marke
 collection: publications
 category: journal
 permalink: /publication/2021-digitization-and-flexibility
-excerpt: 'This paper studies how digitization affects the flexibility of firms’ product assortment and pricing decisions.'
+excerpt: ''
 date: 2021-09-01
 venue: 'Marketing Science'
 paperurl: 'https://pubsonline.informs.org/doi/abs/10.1287/mksc.2021.1294'

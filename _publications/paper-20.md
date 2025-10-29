@@ -3,7 +3,7 @@ title: "Disentangling Ad Tone Effects on Voter Turnout and Candidate Choice in P
 collection: publications
 category: journal
 permalink: /publication/2023-disentangling-ad-tone-effects
-excerpt: 'A long-standing debate in political science concerns the effects of negative advertising.'
+excerpt: ''
 date: 2023-01-01
 venue: 'Management Science'
 paperurl: 'https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2022.4410'

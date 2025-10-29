@@ -3,7 +3,7 @@ title: "Close Enough? A Large-Scale Exploration of Non-experimental Approaches t
 collection: publications
 category: journal
 permalink: /publication/2023-close-enough-non-experimental
-excerpt: 'Randomized controlled trials (RCTs) are the gold standard for measuring advertising effectiveness, but they can be costly and difficult to implement.'
+excerpt: ''
 date: 2023-07-01
 venue: 'Marketing Science'
 paperurl: 'https://pubsonline.informs.org/doi/abs/10.1287/mksc.2022.1394'

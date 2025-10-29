@@ -3,7 +3,7 @@ title: "A Comparison of Approaches to Advertising Measurement: Evidence from Big
 collection: publications
 category: journal
 permalink: /publication/2019-comparison-advertising-measurement
-excerpt: 'Firms need to measure the return on their advertising investments.'
+excerpt: ''
 date: 2019-03-01
 venue: 'Marketing Science'
 paperurl: 'https://pubsonline.informs.org/doi/abs/10.1287/mksc.2018.1141'

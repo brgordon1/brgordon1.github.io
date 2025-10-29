@@ -3,7 +3,7 @@ title: "Multiplicity of Equilibria and Information Structures in Empirical Games
 collection: publications
 category: journal
 permalink: /publication/2015-multiplicity-of-equilibria
-excerpt: 'This article discusses the challenge of equilibrium multiplicity in the estimation of empirical games, particularly in marketing.'
+excerpt: ''
 date: 2015-06-01
 venue: 'Marketing Letters'
 paperurl: 'https://link.springer.com/article/10.1007/s11002-015-9363-9'

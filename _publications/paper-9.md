@@ -3,7 +3,7 @@ title: "Advertising Effects in Presidential Elections"
 collection: publications
 category: journal
 permalink: /publication/2013-advertising-effects-presidential
-excerpt: 'This paper investigates the effects of television advertising in presidential elections.'
+excerpt: ''
 date: 2013-01-01
 venue: 'Marketing Science'
 paperurl: 'https://pubsonline.informs.org/doi/abs/10.1287/mksc.1120.0743'

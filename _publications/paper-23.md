@@ -3,7 +3,7 @@ title: "Personalization and Targeting: How to Experiment, Learn & Optimize"
 collection: publications
 category: journal
 permalink: /publication/2024-personalization-and-targeting
-excerpt: 'Personalization and targeting are key strategies in modern marketing, aiming to enhance customer engagement and firm performance by tailoring marketing actions to individual customer needs and characteristics.'
+excerpt: ''
 date: 2025-08-01
 venue: 'International Journal of Research in Marketing'
 paperurl: 'https://www.sciencedirect.com/science/article/pii/S016781162500062X'

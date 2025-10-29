@@ -3,7 +3,7 @@ title: "LETTER: Field studies of psychologically targeted ads face threats to in
 collection: publications
 category: journal
 permalink: /publication/2018-psychologically-targeted-ads
-excerpt: 'In their study, Matz et al. report the results of three field experiments that test the effectiveness of psychological targeting in digital advertising.'
+excerpt: ''
 date: 2018-06-05
 venue: 'Proceedings of the National Academy of Sciences'
 paperurl: 'https://www.pnas.org/doi/full/10.1073/pnas.1804254115'

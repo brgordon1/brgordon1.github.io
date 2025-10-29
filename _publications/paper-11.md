@@ -3,7 +3,7 @@ title: "Competition and Product Innovation in Dynamic Oligopoly"
 collection: publications
 category: journal
 permalink: /publication/2014-competition-product-innovation
-excerpt: 'We develop and estimate a dynamic oligopoly model of competition in the market for computer processors.'
+excerpt: ''
 date: 2014-03-01
 venue: 'Quantitative Marketing and Economics'
 paperurl: 'https://link.springer.com/article/10.1007/s11129-013-9140-5'

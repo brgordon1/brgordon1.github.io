@@ -3,7 +3,7 @@ title: "Inefficiencies in Digital Advertising Markets"
 collection: publications
 category: journal
 permalink: /publication/2021-inefficiencies-digital-advertising
-excerpt: 'Digital advertising is a large and rapidly growing industry, but there is growing concern about its efficiency.'
+excerpt: ''
 date: 2021-01-01
 venue: 'Journal of Marketing'
 paperurl: 'https://journals.sagepub.com/doi/abs/10.1177/0022242920962726'

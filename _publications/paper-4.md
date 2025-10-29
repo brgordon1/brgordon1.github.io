@@ -3,7 +3,7 @@ title: "Drs. Muth and Mills Meet Dr. Tiebout: Integrating Location-Specific Amen
 collection: publications
 category: journal
 permalink: /publication/2010-muth-mills-tiebout
-excerpt: 'This article analyzes and compares two alternative approaches of incorporating location-specific amenities in equilibrium models of local jurisdictions.'
+excerpt: ''
 date: 2010-02-01
 venue: 'Journal of Regional Science'
 paperurl: 'https://onlinelibrary.wiley.com/doi/10.1111/j.1467-9787.2009.00649.x'

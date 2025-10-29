@@ -3,7 +3,7 @@ title: "A New Approach to Estimating the Production Function for Housing"
 collection: publications
 category: journal
 permalink: /publication/2010-estimating-production-function-housing
-excerpt: 'This paper develops a new approach to estimating the production function for housing.'
+excerpt: ''
 date: 2010-06-01
 venue: 'American Economic Review'
 paperurl: 'https://www.aeaweb.org/articles?id=10.1257/aer.100.3.905'
