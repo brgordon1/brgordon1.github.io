@@ -1,9 +1,33 @@
 ---
 layout: archive
-title: "Publications"
+title: "Research"
 permalink: /publications/
 author_profile: true
 ---
+
+<style>
+  /* Reduce font size for publication titles */
+  .archive__item-title {
+    font-size: 1.1em !important;
+    margin-bottom: 0.3em !important;
+  }
+  
+  /* Reduce font size for publication excerpts/citations */
+  .archive__item-excerpt {
+    font-size: 0.9em !important;
+    margin-bottom: 0.5em !important;
+  }
+  
+  /* Reduce vertical spacing between publications */
+  .list__item {
+    margin-bottom: 1em !important;
+  }
+  
+  /* Reduce spacing after section headers */
+  h2 + hr {
+    margin-bottom: 1em !important;
+  }
+</style>
 
 {% if site.author.googlescholar %}
   <div class="wordwrap">You can find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
