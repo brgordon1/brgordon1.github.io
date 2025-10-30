@@ -6,7 +6,7 @@ permalink: /publication/2013-price-elasticity-economic-growth
 excerpt: ''
 date: 2013-02-01
 venue: 'Journal of Marketing Research'
-paperurl: 'https://journals.sagepub.com/doi/abs/10.1509/jmr.10.0223'
+paperurl: 'https://journals.sagepub.com/doi/10.1509/jmr.11.0162'
 citation: 'Gordon, B. R., Goldfarb, A., & Li, Y. (2013). &quot;Does Price Elasticity Vary with Economic Growth? A Cross-Category Analysis.&quot; <i>Journal of Marketing Research</i>. 50(1), 4-23.'
 ---
 

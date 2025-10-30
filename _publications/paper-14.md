@@ -6,7 +6,7 @@ permalink: /publication/2016-advertising-competition-presidential
 excerpt: ''
 date: 2016-03-01
 venue: 'Quantitative Marketing and Economics'
-paperurl: 'https://link.springer.com/article/10.1007/s11129-015-9162-7'
+paperurl: 'https://link.springer.com/article/10.1007/s11129-016-9165-6'
 citation: 'Gordon, B. R. & Hartmann, W. R. (2016). &quot;Advertising Competition in Presidential Elections.&quot; <i>Quantitative Marketing and Economics</i>. 14(1), 1-40.'
 ---
 

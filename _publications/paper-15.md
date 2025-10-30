@@ -6,7 +6,7 @@ permalink: /publication/2018-national-vs-local-pricing
 excerpt: ''
 date: 2018-09-01
 venue: 'Marketing Science'
-paperurl: 'https://pubsonline.informs.org/doi/abs/10.1287/mksc.2018.1107'
+paperurl: 'https://pubsonline.informs.org/doi/10.1287/mksc.2018.1100'
 citation: 'Li, Y., Gordon, B. R., & Netzer, O. (2018). &quot;An Empirical Study of National vs. Local Pricing by Chain Stores under Competition.&quot; <i>Marketing Science</i>. 37(5), 812-837.'
 ---
 

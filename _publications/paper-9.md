@@ -6,7 +6,7 @@ permalink: /publication/2013-advertising-effects-presidential
 excerpt: ''
 date: 2013-01-01
 venue: 'Marketing Science'
-paperurl: 'https://pubsonline.informs.org/doi/abs/10.1287/mksc.1120.0743'
+paperurl: 'https://www.jstor.org/stable/pdf/23361432.pdf'
 citation: 'Gordon, B. R. & Hartmann, W. (2013). &quot;Advertising Effects in Presidential Elections.&quot; <i>Marketing Science</i>. 32(1), 19-35.'
 ---
 

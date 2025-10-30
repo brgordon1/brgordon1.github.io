@@ -6,7 +6,7 @@ permalink: /publication/2014-competition-product-innovation
 excerpt: ''
 date: 2014-03-01
 venue: 'Quantitative Marketing and Economics'
-paperurl: 'https://link.springer.com/article/10.1007/s11129-013-9140-5'
+paperurl: 'https://link.springer.com/article/10.1007/s11129-013-9142-2'
 citation: 'Goettler, R. L. & Gordon, B. R. (2014). &quot;Competition and Product Innovation in Dynamic Oligopoly.&quot; <i>Quantitative Marketing and Economics</i>. 12(1), 1-42.'
 ---
 

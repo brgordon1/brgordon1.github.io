@@ -6,7 +6,7 @@ permalink: /publication/2018-psychologically-targeted-ads
 excerpt: ''
 date: 2018-06-05
 venue: 'Proceedings of the National Academy of Sciences'
-paperurl: 'https://www.pnas.org/doi/full/10.1073/pnas.1804254115'
+paperurl: 'https://www.pnas.org/doi/10.1073/pnas.1805363115'
 citation: 'Eckles, D., Gordon, B. R., & Johnson, G. A. (2018). &quot;LETTER: Field studies of psychologically targeted ads face threats to internal validity.&quot; <i>Proceedings of the National Academy of Sciences</i>. 115(23), E5254-E5255.'
 ---
 

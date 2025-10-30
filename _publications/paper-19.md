@@ -6,7 +6,7 @@ permalink: /publication/2021-digitization-and-flexibility
 excerpt: ''
 date: 2021-09-01
 venue: 'Marketing Science'
-paperurl: 'https://pubsonline.informs.org/doi/abs/10.1287/mksc.2021.1294'
+paperurl: 'https://pubsonline.informs.org/doi/10.1287/mksc.2020.1282'
 citation: 'Yang, J., Anderson, E. T., & Gordon, B. R. (2021). &quot;Digitization and Flexibility: Evidence from the South Korean Movie Market.&quot; <i>Marketing Science</i>. 40(5), 821-843.'
 ---
 

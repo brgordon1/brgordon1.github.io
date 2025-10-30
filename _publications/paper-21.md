@@ -6,7 +6,7 @@ permalink: /publication/2023-close-enough-non-experimental
 excerpt: ''
 date: 2023-07-01
 venue: 'Marketing Science'
-paperurl: 'https://pubsonline.informs.org/doi/abs/10.1287/mksc.2022.1394'
+paperurl: 'https://pubsonline.informs.org/doi/10.1287/mksc.2022.1413'
 citation: 'Gordon, B. R., Moakler, R., & Zettelmeyer, F. (2023). &quot;Close Enough? A Large-Scale Exploration of Non-experimental Approaches to Advertising Measurement.&quot; <i>Marketing Science</i>. 42(4), 768-793.'
 ---
 

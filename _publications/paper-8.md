@@ -6,7 +6,7 @@ permalink: /publication/2012-marketing-and-politics
 excerpt: ''
 date: 2012-06-01
 venue: 'Marketing Letters'
-paperurl: 'https://link.springer.com/article/10.1007/s11002-012-9189-y'
+paperurl: 'https://home.uchicago.edu/ourminsky/Marketing_Politics.pdf'
 citation: 'Gordon, B. R., Lovett, M., Shachar, R., Arceneaux, K., Moorthy, S., Peress, M., Rao, A., Sen, S., Soberman, D., & Urminsky, O. (2012). &quot;Marketing and Politics: Models, Behavior, and Policy Implications.&quot; <i>Marketing Letters</i>. 23(2), 391-403.'
 ---
 

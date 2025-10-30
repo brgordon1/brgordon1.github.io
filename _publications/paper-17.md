@@ -6,7 +6,7 @@ permalink: /publication/2019-comparison-advertising-measurement
 excerpt: ''
 date: 2019-03-01
 venue: 'Marketing Science'
-paperurl: 'https://pubsonline.informs.org/doi/abs/10.1287/mksc.2018.1141'
+paperurl: 'https://pubsonline.informs.org/doi/10.1287/mksc.2018.1135'
 citation: 'Gordon, B. R., Zettelmeyer, F., Bhargava, N., & Chapsky, D. (2019). &quot;A Comparison of Approaches to Advertising Measurement: Evidence from Big Field Experiments at Facebook.&quot; <i>Marketing Science</i>. 38(2), 193-225.'
 ---
 

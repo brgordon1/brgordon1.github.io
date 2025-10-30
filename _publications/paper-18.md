@@ -6,7 +6,7 @@ permalink: /publication/2021-inefficiencies-digital-advertising
 excerpt: ''
 date: 2021-01-01
 venue: 'Journal of Marketing'
-paperurl: 'https://journals.sagepub.com/doi/abs/10.1177/0022242920962726'
+paperurl: 'https://journals.sagepub.com/doi/10.1177/0022242920913236'
 citation: 'Gordon, B. R., Jerath, K., Katona, Z., Narayanan, S., Shin, J., & Wilbur, K. C. (2021). &quot;Inefficiencies in Digital Advertising Markets.&quot; <i>Journal of Marketing</i>. 85(1), 7-25.'
 ---
 

@@ -6,7 +6,7 @@ permalink: /publication/2015-dynamic-model-rational-addiction
 excerpt: ''
 date: 2015-05-01
 venue: 'Marketing Science'
-paperurl: 'https://pubsonline.informs.org/doi/abs/10.1287/mksc.2014.0898'
+paperurl: 'https://pubsonline.informs.org/doi/10.1287/mksc.2014.0885'
 citation: 'Gordon, B. R. & Sun, B. (2015). &quot;A Dynamic Model of Rational Addiction: Evaluating Cigarette Taxes.&quot; <i>Marketing Science</i>. 34(3), 452-470.'
 ---
 

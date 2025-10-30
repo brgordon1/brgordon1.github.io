@@ -6,7 +6,7 @@ permalink: /publication/2015-multiplicity-of-equilibria
 excerpt: ''
 date: 2015-06-01
 venue: 'Marketing Letters'
-paperurl: 'https://link.springer.com/article/10.1007/s11002-015-9363-9'
+paperurl: 'https://link.springer.com/article/10.1007/s11002-014-9308-z'
 citation: 'Borkovsky, R., Ellickson, P., Gordon, B. R., Aguirregabiria, V., Gardete, P., Grieco, P., Gureckis, T., Ho, T. H., Mathevet, L. & Sweeting, A. (2015). &quot;Multiplicity of Equilibria and Information Structures in Empirical Games: Challenges and Prospects.&quot; <i>Marketing Letters</i>. 26(2), 115-125.'
 ---
 
