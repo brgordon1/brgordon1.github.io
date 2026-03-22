@@ -186,10 +186,10 @@ author_profile: true
   }
 
   .host-photo {
-    width: 100%;
-    aspect-ratio: 0.95 / 1;
+    width: min(62%, 300px);
     border-radius: 10px;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     display: block;
     border: 1px solid var(--border);
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
@@ -310,6 +310,9 @@ author_profile: true
       grid-template-columns: 1fr;
       gap: 3rem;
     }
+    .host-photo {
+      width: min(100%, 300px);
+    }
   }
 </style>
 </head>
@@ -320,7 +323,7 @@ author_profile: true
     <div class="brand-block">
       <div class="brand-kicker">Podcast</div>
       <div class="brand-title">How I Wrote This</div>
-      <div class="brand-subtitle">A Journal of Marketing Research production</div>
+      <div class="brand-subtitle">Supported by the Journal of Marketing Research</div>
     </div>
     <nav class="topbar-nav" aria-label="Podcast pages">
       <a class="page-link" href="{{ '/hiwt-podcast/' | relative_url }}">
@@ -398,11 +401,8 @@ author_profile: true
       <a class="listen-link" href="https://open.spotify.com/show/3LrmMlwz4gh4dV3eVufXvV" target="_blank" rel="noopener">
         <span class="material-symbols-outlined">play_circle</span> Spotify
       </a>
-      <a class="listen-link" href="https://podcasts.apple.com/us/podcast/how-i-wrote-this/id1734070058" target="_blank" rel="noopener">
+      <a class="listen-link" href="https://podcasts.apple.com/us/podcast/how-i-wrote-this/id1701640912" target="_blank" rel="noopener">
         <span class="material-symbols-outlined">podcasts</span> Apple Podcasts
-      </a>
-      <a class="listen-link" href="https://www.youtube.com/@HowIWroteThis" target="_blank" rel="noopener">
-        <span class="material-symbols-outlined">smart_display</span> YouTube
       </a>
     </div>
   </div>
