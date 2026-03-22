@@ -20,19 +20,19 @@ author_profile: true
 <meta property="og:title" content="How I Wrote This — A Podcast by Brett Gordon & Karen Winterich"/>
 <meta property="og:description" content="A Journal of Marketing Research podcast about the research process behind published academic marketing papers."/>
 <meta property="og:url" content="{{ page.url | absolute_url }}"/>
-<meta property="og:image" content="{{ '/hiwt-podcast/cover.png' | absolute_url }}"/>
+<meta property="og:image" content="{{ '/images/hiwt-podcast/cover.png' | absolute_url }}"/>
 <meta property="og:image:alt" content="How I Wrote This podcast cover art"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="How I Wrote This — A Podcast by Brett Gordon & Karen Winterich"/>
 <meta name="twitter:description" content="A Journal of Marketing Research podcast about the research process behind published academic marketing papers."/>
-<meta name="twitter:image" content="{{ '/hiwt-podcast/cover.png' | absolute_url }}"/>
+<meta name="twitter:image" content="{{ '/images/hiwt-podcast/cover.png' | absolute_url }}"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "PodcastSeries",
   "name": "How I Wrote This",
   "url": "{{ page.url | absolute_url }}",
-  "image": "{{ '/hiwt-podcast/cover.png' | absolute_url }}",
+  "image": "{{ '/images/hiwt-podcast/cover.png' | absolute_url }}",
   "description": "How I Wrote This is a Journal of Marketing Research podcast hosted by Brett Gordon and Karen Winterich about how academic marketing papers go from early idea to publication.",
   "publisher": {
     "@type": "Organization",
@@ -81,12 +81,112 @@ author_profile: true
 
   a { color: inherit; text-decoration: none; }
 
-  /* HERO */
-  .hero {
+  .page-shell {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+  }
+
+  .podcast-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(11, 11, 12, 0.82);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  }
+
+  .topbar-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .brand-block {
     display: flex;
     flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .brand-kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.56rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+  }
+
+  .brand-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+
+  .brand-subtitle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.56rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-faint);
+  }
+
+  .topbar-nav {
+    display: flex;
     align-items: center;
-    padding: 3.5rem 1.5rem 0;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .page-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-faint);
+    transition: color 0.2s;
+  }
+
+  .page-link:hover,
+  .page-link.active {
+    color: var(--accent);
+  }
+
+  .page-link .material-symbols-outlined {
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    padding: 3rem 0 0;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.95fr);
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .main-column {
+    min-width: 0;
+  }
+
+  .hero-main {
+    min-width: 0;
+  }
+
+  .hero-aside {
+    position: sticky;
+    top: 6rem;
+    align-self: start;
   }
 
   .cover-art-wrapper {
@@ -115,9 +215,8 @@ author_profile: true
   }
 
   .hero-text {
-    text-align: center;
-    margin-top: 2.5rem;
-    max-width: 580px;
+    margin-top: 2.2rem;
+    max-width: 640px;
   }
 
   .hero-title {
@@ -137,6 +236,25 @@ author_profile: true
     margin-top: 0.8rem;
   }
 
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.4rem 0.7rem;
+    border: 1px solid var(--border-light);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 999px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.56rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--accent);
+  }
+
+  .hero-badge .material-symbols-outlined {
+    font-size: 0.9rem;
+  }
+
   .hero-tagline {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.62rem;
@@ -154,39 +272,9 @@ author_profile: true
     font-style: italic;
   }
 
-  .page-links {
-    display: flex;
-    gap: 0.75rem;
-    justify-content: center;
-    margin-top: 1.4rem;
-    flex-wrap: wrap;
-  }
-
-  .page-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.58rem;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    color: var(--text-faint);
-    transition: color 0.2s;
-  }
-
-  .page-link:hover,
-  .page-link.active {
-    color: var(--accent);
-  }
-
-  .page-link .material-symbols-outlined {
-    font-size: 0.9rem;
-  }
-
   .listen-links {
     display: flex;
     gap: 0.6rem;
-    justify-content: center;
     margin-top: 1.8rem;
     flex-wrap: wrap;
   }
@@ -218,17 +306,14 @@ author_profile: true
 
   .section-divider {
     width: 100%;
-    max-width: 960px;
-    margin: 3rem auto;
+    margin: 3rem 0;
     border: none;
     border-top: 1px solid var(--border);
   }
 
   /* EPISODES */
   .episodes-section {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 1.5rem 3rem;
+    padding: 0 0 3rem;
   }
 
   .section-header {
@@ -272,6 +357,21 @@ author_profile: true
   .episode:last-child { border-bottom: 1px solid var(--border); }
   .episode:hover { background: rgba(255,255,255,0.012); }
   .episode:hover .ep-title { color: var(--accent); }
+
+  .episode--embedded {
+    display: block;
+  }
+
+  .episode--embedded:hover {
+    background: transparent;
+  }
+
+  .episode-main {
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    gap: 1rem;
+    align-items: start;
+  }
 
   .ep-thumb {
     width: 56px;
@@ -349,29 +449,65 @@ author_profile: true
 
   .episode:hover .ep-play .material-symbols-outlined { opacity: 1; }
 
-  /* ABOUT PREVIEW */
-  .about-preview {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 1.5rem 3.5rem;
+  .ep-embed {
+    margin-top: 1rem;
+    padding-left: calc(56px + 1rem);
   }
 
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-top: 1.5rem;
+  .ep-embed iframe {
+    width: 100%;
+    border: 0;
+    border-radius: 12px;
+    background: transparent;
   }
 
-  .about-text {
+  .ep-open-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.8rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.56rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-faint);
+    transition: color 0.2s;
+  }
+
+  .ep-open-link:hover {
+    color: var(--accent);
+  }
+
+  .about-card {
+    padding: 1.4rem;
+    border: 1px solid var(--border);
+    background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.01));
+    border-radius: 12px;
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+  }
+
+  .about-card-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .about-card-copy {
+    margin-top: 1rem;
     font-size: 0.92rem;
     line-height: 1.75;
     color: var(--text-dim);
   }
 
-  .about-text em { color: var(--text); }
+  .about-card-copy em { color: var(--text); }
 
-  .host-list { display: flex; flex-direction: column; gap: 1.2rem; }
+  .host-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.35rem;
+  }
 
   .host-card {
     display: flex;
@@ -437,69 +573,111 @@ author_profile: true
   .styled-link:hover { border-bottom-color: var(--accent); }
 
   @media (max-width: 640px) {
-    .hero { padding-top: 2rem; }
+    .page-shell { padding: 0 1rem 3rem; }
+    .topbar-inner {
+      padding: 0.9rem 1rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .content-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .hero {
+      padding-top: 2rem;
+    }
+    .hero-aside {
+      position: static;
+    }
     .cover-art-wrapper { max-width: 90%; }
     .hero-text { margin-top: 1.8rem; }
-    .about-grid { grid-template-columns: 1fr; }
     .episode { grid-template-columns: 44px 1fr auto; gap: 0.7rem; }
+    .episode-main { grid-template-columns: 44px 1fr auto; gap: 0.7rem; }
     .ep-thumb { width: 44px; height: 44px; }
     .ep-desc { display: none; }
+    .ep-embed { padding-left: 0; }
   }
 </style>
 </head>
 <body>
 
-<section class="hero">
-  <div class="cover-art-wrapper">
-    <img class="cover-art" src="cover.png" alt="How I Wrote This podcast cover art — a warmly lit desk cluttered with books, papers, and a glowing monitor"/>
-  </div>
-  <div class="hero-text">
-    <h1 class="hero-title">How I Wrote This</h1>
-    <p class="hero-hosts">With Brett Gordon &amp; Karen Winterich</p>
-    <p class="hero-tagline">A Journal of Marketing Research Podcast</p>
-    <p class="hero-description">
-      &ldquo;Publish or perish&rdquo; &mdash; it&rsquo;s a maxim that academics live by. But how does a paper become a publication? In each episode, marketing professors Brett Gordon and Karen Winterich speak with the authors of an academic marketing paper to get the backstory of how that paper came to be.
-    </p>
-    <div class="page-links">
-      <a class="page-link active" href="index.html">
+<header class="podcast-topbar">
+  <div class="topbar-inner">
+    <div class="brand-block">
+      <div class="brand-kicker">Podcast</div>
+      <div class="brand-title">How I Wrote This</div>
+      <div class="brand-subtitle">A Journal of Marketing Research production</div>
+    </div>
+    <nav class="topbar-nav" aria-label="Podcast pages">
+      <a class="page-link active" href="{{ '/hiwt-podcast/' | relative_url }}">
         <span class="material-symbols-outlined">home</span> Episodes
       </a>
-      <a class="page-link" href="about.html">
+      <a class="page-link" href="{{ '/hiwt-podcast/about.html' | relative_url }}">
         <span class="material-symbols-outlined">info</span> About
       </a>
-    </div>
-    <div class="listen-links">
-      <a class="listen-link" href="https://open.spotify.com/show/3LrmMlwz4gh4dV3eVufXvV" target="_blank" rel="noopener">
-        <span class="material-symbols-outlined">play_circle</span> Spotify
-      </a>
-      <a class="listen-link" href="https://podcasts.apple.com/us/podcast/how-i-wrote-this/id1734070058" target="_blank" rel="noopener">
-        <span class="material-symbols-outlined">podcasts</span> Apple Podcasts
-      </a>
-      <a class="listen-link" href="https://www.youtube.com/@HowIWroteThis" target="_blank" rel="noopener">
-        <span class="material-symbols-outlined">smart_display</span> YouTube
-      </a>
-    </div>
+    </nav>
   </div>
-</section>
+</header>
 
-<hr class="section-divider"/>
-
-<section class="episodes-section">
-  <div class="section-header">
-    <h2 class="section-title">Recent Episodes</h2>
-    <a class="section-link" href="https://open.spotify.com/show/3LrmMlwz4gh4dV3eVufXvV" target="_blank" rel="noopener">All Episodes &rarr;</a>
-  </div>
-
-  <div class="episode-list">
-    <a class="episode" href="https://open.spotify.com/episode/2CJzOvmciQjGawDc4PP41P" target="_blank" rel="noopener">
-      <div class="ep-thumb ep-thumb--grocery"><span class="material-symbols-outlined">shopping_cart</span></div>
-      <div class="ep-body">
-        <div class="ep-title">The No Hunger Games with Sylvia Hristakeva, Jura Liaukonyte &amp; Leo Feler</div>
-        <div class="ep-meta"><span>Ep 27</span><span>Mar 2026</span><span>58 min</span></div>
-        <p class="ep-desc">GLP-1 drugs like Ozempic are disrupting the grocery aisle. This study linked GLP-1 usage surveys to 150,000 households&rsquo; purchase data, finding grocery spending declines approximately 5% within six months.</p>
+<div class="page-shell">
+<div class="content-grid">
+  <div class="main-column">
+    <section class="hero">
+      <div class="hero-main">
+        <div class="cover-art-wrapper">
+          <img class="cover-art" src="{{ '/images/hiwt-podcast/cover.png' | relative_url }}" alt="How I Wrote This podcast cover art — a warmly lit desk cluttered with books, papers, and a glowing monitor"/>
+        </div>
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span class="material-symbols-outlined">mic_external_on</span> Academic marketing podcast
+          </div>
+          <h1 class="hero-title">How I Wrote This</h1>
+          <p class="hero-hosts">With Brett Gordon &amp; Karen Winterich</p>
+          <p class="hero-tagline">Behind the research process, one paper at a time</p>
+          <p class="hero-description">
+            &ldquo;Publish or perish&rdquo; &mdash; it&rsquo;s a maxim that academics live by. But how does a paper become a publication? In each episode, marketing professors Brett Gordon and Karen Winterich speak with the authors of an academic marketing paper to get the backstory of how that paper came to be.
+          </p>
+          <div class="listen-links">
+            <a class="listen-link" href="https://open.spotify.com/show/3LrmMlwz4gh4dV3eVufXvV" target="_blank" rel="noopener">
+              <span class="material-symbols-outlined">play_circle</span> Spotify
+            </a>
+            <a class="listen-link" href="https://podcasts.apple.com/us/podcast/how-i-wrote-this/id1734070058" target="_blank" rel="noopener">
+              <span class="material-symbols-outlined">podcasts</span> Apple Podcasts
+            </a>
+            <a class="listen-link" href="https://www.youtube.com/@HowIWroteThis" target="_blank" rel="noopener">
+              <span class="material-symbols-outlined">smart_display</span> YouTube
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
-    </a>
+    </section>
+
+    <hr class="section-divider"/>
+
+    <section class="episodes-section">
+      <div class="section-header">
+        <h2 class="section-title">Recent Episodes</h2>
+        <a class="section-link" href="https://open.spotify.com/show/3LrmMlwz4gh4dV3eVufXvV" target="_blank" rel="noopener">All Episodes &rarr;</a>
+      </div>
+
+      <div class="episode-list">
+    <article class="episode episode--embedded">
+      <div class="episode-main">
+        <div class="ep-thumb ep-thumb--grocery"><span class="material-symbols-outlined">shopping_cart</span></div>
+        <div class="ep-body">
+          <div class="ep-title">The No Hunger Games with Sylvia Hristakeva, Jura Liaukonyte &amp; Leo Feler</div>
+          <div class="ep-meta"><span>Ep 27</span><span>Mar 2026</span><span>58 min</span></div>
+          <p class="ep-desc">GLP-1 drugs like Ozempic are disrupting the grocery aisle. This study linked GLP-1 usage surveys to 150,000 households&rsquo; purchase data, finding grocery spending declines approximately 5% within six months.</p>
+          <a class="ep-open-link" href="https://open.spotify.com/episode/2CJzOvmciQjGawDc4PP41P" target="_blank" rel="noopener">
+            <span class="material-symbols-outlined">open_in_new</span> Open in Spotify
+          </a>
+        </div>
+        <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
+      </div>
+      <div class="ep-embed">
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/2CJzOvmciQjGawDc4PP41P?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify player for The No Hunger Games episode"></iframe>
+      </div>
+    </article>
 
     <a class="episode" href="https://open.spotify.com/episode/1FqxH0pF0bbPEjQRsqyHZu" target="_blank" rel="noopener">
       <div class="ep-thumb ep-thumb--ai"><span class="material-symbols-outlined">psychology</span></div>
@@ -550,40 +728,39 @@ author_profile: true
       </div>
       <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
     </a>
+      </div>
+    </section>
   </div>
-</section>
 
-<hr class="section-divider"/>
-
-<section class="about-preview">
-  <div class="section-header">
-    <h2 class="section-title">About the Podcast</h2>
-  </div>
-  <div class="about-grid">
-    <div class="about-text">
-      <p>How does a rough idea become a published paper? How do researchers navigate the bumps and bruises of the publication process? <em>How I Wrote This</em> pulls back the curtain on academic marketing research &mdash; one paper at a time.</p>
-      <br/>
-      <p>Hosted by the co-editors of the <a class="styled-link" href="https://www.ama.org/journal-of-marketing-research/" target="_blank" rel="noopener">Journal of Marketing Research</a>, each episode features candid conversations with authors about the origin stories, methodological choices, and revision struggles behind their published work.</p>
-      <a class="about-more" href="about.html">Meet the hosts <span class="material-symbols-outlined">arrow_forward</span></a>
-    </div>
-    <div class="host-list">
-      <div class="host-card">
-        <div class="host-avatar">BG</div>
-        <div>
-          <div class="host-name">Brett Gordon</div>
-          <div class="host-role">Kellstadt Professor of Marketing &middot; Kellogg, Northwestern</div>
+  <aside class="hero-aside">
+    <section class="about-card">
+      <h2 class="about-card-title">About the Podcast</h2>
+      <div class="about-card-copy">
+        <p>How does a rough idea become a published paper? How do researchers navigate the bumps and bruises of the publication process? <em>How I Wrote This</em> pulls back the curtain on academic marketing research &mdash; one paper at a time.</p>
+        <p>Hosted by the co-editors of the <a class="styled-link" href="https://www.ama.org/journal-of-marketing-research/" target="_blank" rel="noopener">Journal of Marketing Research</a>, each episode features candid conversations with authors about origin stories, methodological choices, and revision struggles behind their published work.</p>
+      </div>
+      <div class="host-list">
+        <div class="host-card">
+          <div class="host-avatar">BG</div>
+          <div>
+            <div class="host-name">Brett Gordon</div>
+            <div class="host-role">Kellogg, Northwestern</div>
+          </div>
+        </div>
+        <div class="host-card">
+          <div class="host-avatar">KW</div>
+          <div>
+            <div class="host-name">Karen Winterich</div>
+            <div class="host-role">Smeal, Penn State</div>
+          </div>
         </div>
       </div>
-      <div class="host-card">
-        <div class="host-avatar">KW</div>
-        <div>
-          <div class="host-name">Karen Winterich</div>
-          <div class="host-role">Susman Professor in Sustainability &middot; Smeal, Penn State</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      <a class="about-more" href="{{ '/hiwt-podcast/about.html' | relative_url }}">Meet the hosts <span class="material-symbols-outlined">arrow_forward</span></a>
+    </section>
+  </aside>
+</div>
+
+</div>
 
 </body>
 </html>
