@@ -1,4 +1,5 @@
 ---
+layout: blank
 permalink: /hiwt-podcast/
 title: "HIWT Podcast"
 author_profile: true
@@ -10,6 +11,48 @@ author_profile: true
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>How I Wrote This — A Podcast by Brett Gordon & Karen Winterich</title>
+<meta name="description" content="How I Wrote This is a Journal of Marketing Research podcast hosted by Brett Gordon and Karen Winterich about how academic marketing papers go from early idea to publication."/>
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
+<link rel="canonical" href="{{ page.url | absolute_url }}"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="How I Wrote This"/>
+<meta property="og:title" content="How I Wrote This — A Podcast by Brett Gordon & Karen Winterich"/>
+<meta property="og:description" content="A Journal of Marketing Research podcast about the research process behind published academic marketing papers."/>
+<meta property="og:url" content="{{ page.url | absolute_url }}"/>
+<meta property="og:image" content="{{ '/hiwt-podcast/cover.png' | absolute_url }}"/>
+<meta property="og:image:alt" content="How I Wrote This podcast cover art"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="How I Wrote This — A Podcast by Brett Gordon & Karen Winterich"/>
+<meta name="twitter:description" content="A Journal of Marketing Research podcast about the research process behind published academic marketing papers."/>
+<meta name="twitter:image" content="{{ '/hiwt-podcast/cover.png' | absolute_url }}"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastSeries",
+  "name": "How I Wrote This",
+  "url": "{{ page.url | absolute_url }}",
+  "image": "{{ '/hiwt-podcast/cover.png' | absolute_url }}",
+  "description": "How I Wrote This is a Journal of Marketing Research podcast hosted by Brett Gordon and Karen Winterich about how academic marketing papers go from early idea to publication.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Journal of Marketing Research",
+    "url": "https://www.ama.org/journal-of-marketing-research/"
+  },
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Brett Gordon",
+      "url": "https://brgordon1.github.io/"
+    },
+    {
+      "@type": "Person",
+      "name": "Karen Winterich",
+      "url": "http://ssrn.com/author=1616530"
+    }
+  ]
+}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <style>
@@ -37,51 +80,6 @@ author_profile: true
   }
 
   a { color: inherit; text-decoration: none; }
-
-  /* NAV */
-  .site-nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(11,11,12,0.92);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-  }
-
-  .nav-inner {
-    max-width: 960px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.9rem 1.5rem;
-  }
-
-  .nav-brand {
-    font-family: 'EB Garamond', serif;
-    font-size: 1.15rem;
-    font-weight: 500;
-    letter-spacing: -0.01em;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
-
-  .nav-links a {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.62rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--text-dim);
-    transition: color 0.2s;
-  }
-
-  .nav-links a:hover,
-  .nav-links a.active { color: var(--accent); }
 
   /* HERO */
   .hero {
@@ -154,6 +152,35 @@ author_profile: true
     color: var(--text-dim);
     margin-top: 1.4rem;
     font-style: italic;
+  }
+
+  .page-links {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1.4rem;
+    flex-wrap: wrap;
+  }
+
+  .page-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-faint);
+    transition: color 0.2s;
+  }
+
+  .page-link:hover,
+  .page-link.active {
+    color: var(--accent);
+  }
+
+  .page-link .material-symbols-outlined {
+    font-size: 0.9rem;
   }
 
   .listen-links {
@@ -305,6 +332,7 @@ author_profile: true
     line-height: 1.55;
     color: var(--text-dim);
     display: -webkit-box;
+    line-clamp: 2;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -408,30 +436,6 @@ author_profile: true
   }
   .styled-link:hover { border-bottom-color: var(--accent); }
 
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 2rem 1.5rem;
-  }
-
-  .footer-inner {
-    max-width: 960px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer-text {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.58rem;
-    color: var(--text-faint);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  .footer-text a { color: var(--text-dim); transition: color 0.2s; }
-  .footer-text a:hover { color: var(--accent); }
-
   @media (max-width: 640px) {
     .hero { padding-top: 2rem; }
     .cover-art-wrapper { max-width: 90%; }
@@ -440,22 +444,10 @@ author_profile: true
     .episode { grid-template-columns: 44px 1fr auto; gap: 0.7rem; }
     .ep-thumb { width: 44px; height: 44px; }
     .ep-desc { display: none; }
-    .nav-links { gap: 1rem; }
-    .footer-inner { flex-direction: column; gap: 0.5rem; }
   }
 </style>
 </head>
 <body>
-
-<nav class="site-nav">
-  <div class="nav-inner">
-    <div class="nav-brand">How I Wrote This</div>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Episodes</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </div>
-</nav>
 
 <section class="hero">
   <div class="cover-art-wrapper">
@@ -468,6 +460,14 @@ author_profile: true
     <p class="hero-description">
       &ldquo;Publish or perish&rdquo; &mdash; it&rsquo;s a maxim that academics live by. But how does a paper become a publication? In each episode, marketing professors Brett Gordon and Karen Winterich speak with the authors of an academic marketing paper to get the backstory of how that paper came to be.
     </p>
+    <div class="page-links">
+      <a class="page-link active" href="index.html">
+        <span class="material-symbols-outlined">home</span> Episodes
+      </a>
+      <a class="page-link" href="about.html">
+        <span class="material-symbols-outlined">info</span> About
+      </a>
+    </div>
     <div class="listen-links">
       <a class="listen-link" href="https://open.spotify.com/show/3LrmMlwz4gh4dV3eVufXvV" target="_blank" rel="noopener">
         <span class="material-symbols-outlined">play_circle</span> Spotify
@@ -584,13 +584,6 @@ author_profile: true
     </div>
   </div>
 </section>
-
-<footer>
-  <div class="footer-inner">
-    <span class="footer-text">A production of the <a href="https://www.ama.org/journal-of-marketing-research/" target="_blank" rel="noopener">Journal of Marketing Research</a></span>
-    <span class="footer-text"><a href="about.html">About</a></span>
-  </div>
-</footer>
 
 </body>
 </html>
