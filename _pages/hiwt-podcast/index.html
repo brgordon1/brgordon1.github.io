@@ -1,0 +1,596 @@
+---
+permalink: /hiwt-podcast/
+title: "HIWT Podcast"
+author_profile: true
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>How I Wrote This — A Podcast by Brett Gordon & Karen Winterich</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --bg: #0B0B0C;
+    --bg-raised: #131315;
+    --bg-card: #18181b;
+    --text: #EBE9E1;
+    --text-dim: #a09d95;
+    --text-faint: #5e5c55;
+    --accent: #e8683a;
+    --accent-hover: #f07a4e;
+    --accent-subtle: #e8683a18;
+    --border: #222019;
+    --border-light: #2f2d26;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Lora', serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* NAV */
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11,11,12,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9rem 1.5rem;
+  }
+
+  .nav-brand {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-dim);
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active { color: var(--accent); }
+
+  /* HERO */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.5rem 1.5rem 0;
+  }
+
+  .cover-art-wrapper {
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+  }
+
+  .cover-art-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 60px;
+    background: radial-gradient(ellipse, rgba(212,135,68,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cover-art {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.03);
+  }
+
+  .hero-text {
+    text-align: center;
+    margin-top: 2.5rem;
+    max-width: 580px;
+  }
+
+  .hero-title {
+    font-family: 'EB Garamond', serif;
+    font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+  }
+
+  .hero-hosts {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    margin-top: 0.8rem;
+  }
+
+  .hero-tagline {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-faint);
+    margin-top: 0.4rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--text-dim);
+    margin-top: 1.4rem;
+    font-style: italic;
+  }
+
+  .listen-links {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    margin-top: 1.8rem;
+    flex-wrap: wrap;
+  }
+
+  .listen-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 1.2rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: 1px solid var(--border-light);
+    transition: all 0.25s ease;
+  }
+
+  .listen-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-subtle);
+  }
+
+  .listen-link .material-symbols-outlined {
+    font-size: 0.95rem;
+    font-variation-settings: 'FILL' 1;
+  }
+
+  .section-divider {
+    width: 100%;
+    max-width: 960px;
+    margin: 3rem auto;
+    border: none;
+    border-top: 1px solid var(--border);
+  }
+
+  /* EPISODES */
+  .episodes-section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.5rem 3rem;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  .section-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-faint);
+    transition: color 0.2s;
+  }
+
+  .section-link:hover { color: var(--accent); }
+
+  .episode-list { display: flex; flex-direction: column; }
+
+  .episode {
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    gap: 1rem;
+    align-items: start;
+    padding: 1.2rem 0.6rem;
+    border-top: 1px solid var(--border);
+    transition: background 0.2s;
+    border-radius: 2px;
+  }
+
+  .episode:last-child { border-bottom: 1px solid var(--border); }
+  .episode:hover { background: rgba(255,255,255,0.012); }
+  .episode:hover .ep-title { color: var(--accent); }
+
+  .ep-thumb {
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ep-thumb::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+    background: linear-gradient(135deg, white 0%, transparent 60%);
+  }
+
+  .ep-thumb .material-symbols-outlined {
+    font-size: 1.4rem;
+    opacity: 0.85;
+    position: relative;
+    z-index: 1;
+  }
+
+  .ep-thumb--grocery   { background: linear-gradient(145deg, #2d5a3d, #1a3d28); color: #7dcea0; }
+  .ep-thumb--ai        { background: linear-gradient(145deg, #2c3e6b, #1a2744); color: #7ea8e0; }
+  .ep-thumb--romance   { background: linear-gradient(145deg, #6b3a5c, #44243a); color: #d4a0c4; }
+  .ep-thumb--valuation { background: linear-gradient(145deg, #5c4a2a, #3d3018); color: #d4b878; }
+  .ep-thumb--community { background: linear-gradient(145deg, #4a3a5c, #2d2340); color: #b8a0d0; }
+  .ep-thumb--frugality { background: linear-gradient(145deg, #5a3d2d, #3d2818); color: #d4a478; }
+
+  .ep-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.3;
+    transition: color 0.2s;
+  }
+
+  .ep-meta {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 0.3rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .ep-desc {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: var(--text-dim);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .ep-play { padding-top: 0.15rem; flex-shrink: 0; }
+
+  .ep-play .material-symbols-outlined {
+    font-size: 1.5rem;
+    color: var(--accent);
+    opacity: 0.35;
+    transition: opacity 0.2s;
+  }
+
+  .episode:hover .ep-play .material-symbols-outlined { opacity: 1; }
+
+  /* ABOUT PREVIEW */
+  .about-preview {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.5rem 3.5rem;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .about-text {
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: var(--text-dim);
+  }
+
+  .about-text em { color: var(--text); }
+
+  .host-list { display: flex; flex-direction: column; gap: 1.2rem; }
+
+  .host-card {
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+    padding: 0.8rem;
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+
+  .host-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'EB Garamond', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dim);
+    flex-shrink: 0;
+  }
+
+  .host-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+
+  .host-role {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-faint);
+    margin-top: 0.1rem;
+  }
+
+  .about-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 1.2rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    transition: opacity 0.2s;
+  }
+
+  .about-more:hover { opacity: 0.75; }
+  .about-more .material-symbols-outlined { font-size: 0.85rem; }
+
+  .styled-link {
+    color: var(--accent);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .styled-link:hover { border-bottom-color: var(--accent); }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 1.5rem;
+  }
+
+  .footer-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .footer-text a { color: var(--text-dim); transition: color 0.2s; }
+  .footer-text a:hover { color: var(--accent); }
+
+  @media (max-width: 640px) {
+    .hero { padding-top: 2rem; }
+    .cover-art-wrapper { max-width: 90%; }
+    .hero-text { margin-top: 1.8rem; }
+    .about-grid { grid-template-columns: 1fr; }
+    .episode { grid-template-columns: 44px 1fr auto; gap: 0.7rem; }
+    .ep-thumb { width: 44px; height: 44px; }
+    .ep-desc { display: none; }
+    .nav-links { gap: 1rem; }
+    .footer-inner { flex-direction: column; gap: 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <div class="nav-brand">How I Wrote This</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Episodes</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="cover-art-wrapper">
+    <img class="cover-art" src="cover.png" alt="How I Wrote This podcast cover art — a warmly lit desk cluttered with books, papers, and a glowing monitor"/>
+  </div>
+  <div class="hero-text">
+    <h1 class="hero-title">How I Wrote This</h1>
+    <p class="hero-hosts">With Brett Gordon &amp; Karen Winterich</p>
+    <p class="hero-tagline">A Journal of Marketing Research Podcast</p>
+    <p class="hero-description">
+      &ldquo;Publish or perish&rdquo; &mdash; it&rsquo;s a maxim that academics live by. But how does a paper become a publication? In each episode, marketing professors Brett Gordon and Karen Winterich speak with the authors of an academic marketing paper to get the backstory of how that paper came to be.
+    </p>
+    <div class="listen-links">
+      <a class="listen-link" href="https://open.spotify.com/show/3LrmMlwz4gh4dV3eVufXvV" target="_blank" rel="noopener">
+        <span class="material-symbols-outlined">play_circle</span> Spotify
+      </a>
+      <a class="listen-link" href="https://podcasts.apple.com/us/podcast/how-i-wrote-this/id1734070058" target="_blank" rel="noopener">
+        <span class="material-symbols-outlined">podcasts</span> Apple Podcasts
+      </a>
+      <a class="listen-link" href="https://www.youtube.com/@HowIWroteThis" target="_blank" rel="noopener">
+        <span class="material-symbols-outlined">smart_display</span> YouTube
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider"/>
+
+<section class="episodes-section">
+  <div class="section-header">
+    <h2 class="section-title">Recent Episodes</h2>
+    <a class="section-link" href="https://open.spotify.com/show/3LrmMlwz4gh4dV3eVufXvV" target="_blank" rel="noopener">All Episodes &rarr;</a>
+  </div>
+
+  <div class="episode-list">
+    <a class="episode" href="https://open.spotify.com/episode/2CJzOvmciQjGawDc4PP41P" target="_blank" rel="noopener">
+      <div class="ep-thumb ep-thumb--grocery"><span class="material-symbols-outlined">shopping_cart</span></div>
+      <div class="ep-body">
+        <div class="ep-title">The No Hunger Games with Sylvia Hristakeva, Jura Liaukonyte &amp; Leo Feler</div>
+        <div class="ep-meta"><span>Ep 27</span><span>Mar 2026</span><span>58 min</span></div>
+        <p class="ep-desc">GLP-1 drugs like Ozempic are disrupting the grocery aisle. This study linked GLP-1 usage surveys to 150,000 households&rsquo; purchase data, finding grocery spending declines approximately 5% within six months.</p>
+      </div>
+      <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
+    </a>
+
+    <a class="episode" href="https://open.spotify.com/episode/1FqxH0pF0bbPEjQRsqyHZu" target="_blank" rel="noopener">
+      <div class="ep-thumb ep-thumb--ai"><span class="material-symbols-outlined">psychology</span></div>
+      <div class="ep-body">
+        <div class="ep-title">AI, Authorship, and the Editorial Process</div>
+        <div class="ep-meta"><span>Ep 26</span><span>Feb 2026</span><span>45 min</span></div>
+        <p class="ep-desc">JMR Editor in Chief Rebecca Hamilton and co-editors Kapil Tuli and Raghu Iyengar join the hosts to discuss the role of AI in authorship and the editorial process.</p>
+      </div>
+      <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
+    </a>
+
+    <a class="episode" href="https://open.spotify.com/episode/2ujvymsenj9VBfAXoN9Jdt" target="_blank" rel="noopener">
+      <div class="ep-thumb ep-thumb--romance"><span class="material-symbols-outlined">favorite</span></div>
+      <div class="ep-body">
+        <div class="ep-title">Persevering from the &ldquo;Idea Nugget&rdquo; to Publication with Yuechen Wu, Jared Watson &amp; Ali Faraji-Rad</div>
+        <div class="ep-meta"><span>Ep 25</span><span>Jan 2026</span><span>47 min</span></div>
+        <p class="ep-desc">A single demographic statistic about car leasing sparked research into how perceived romantic relationship stability shapes product rental decisions.</p>
+      </div>
+      <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
+    </a>
+
+    <a class="episode" href="https://open.spotify.com/episode/2rAUqXjeWR9MiZm2wLgQxs" target="_blank" rel="noopener">
+      <div class="ep-thumb ep-thumb--valuation"><span class="material-symbols-outlined">trending_up</span></div>
+      <div class="ep-body">
+        <div class="ep-title">Customer-Based Corporate Valuation with Dan McCarthy &amp; Peter Fader</div>
+        <div class="ep-meta"><span>Ep 24</span><span>Dec 2025</span><span>46 min</span></div>
+        <p class="ep-desc">How individual buying behavior drives firm value &mdash; using publicly disclosed customer metrics to value companies like Wayfair, catching the attention of Wall Street.</p>
+      </div>
+      <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
+    </a>
+
+    <a class="episode" href="https://open.spotify.com/episode/7ybUXFEBHV1eDCr70q4jLO" target="_blank" rel="noopener">
+      <div class="ep-thumb ep-thumb--community"><span class="material-symbols-outlined">storefront</span></div>
+      <div class="ep-body">
+        <div class="ep-title">How Fatal School Shootings Impact Local Economies</div>
+        <div class="ep-meta"><span>Ep 23</span><span>Nov 2025</span><span>52 min</span></div>
+        <p class="ep-desc">Muzeeb Shaik, John Costello, and Adithya Pattabhiramaiah show how heightened anxiety impacts grocery purchases and spending at food and beverage establishments.</p>
+      </div>
+      <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
+    </a>
+
+    <a class="episode" href="https://open.spotify.com/episode/25nFDiBm1JHydleCYcrzD0" target="_blank" rel="noopener">
+      <div class="ep-thumb ep-thumb--frugality"><span class="material-symbols-outlined">savings</span></div>
+      <div class="ep-body">
+        <div class="ep-title">Frugality Is Hard to Afford with Yesim Orhun &amp; Mike Palazzolo</div>
+        <div class="ep-meta"><span>Ep 22</span><span>Oct 2025</span><span>45 min</span></div>
+        <p class="ep-desc">The &ldquo;poverty penalty&rdquo; &mdash; how financial constraints make the strategies that save money require money lower-income households don&rsquo;t have.</p>
+      </div>
+      <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
+    </a>
+  </div>
+</section>
+
+<hr class="section-divider"/>
+
+<section class="about-preview">
+  <div class="section-header">
+    <h2 class="section-title">About the Podcast</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>How does a rough idea become a published paper? How do researchers navigate the bumps and bruises of the publication process? <em>How I Wrote This</em> pulls back the curtain on academic marketing research &mdash; one paper at a time.</p>
+      <br/>
+      <p>Hosted by the co-editors of the <a class="styled-link" href="https://www.ama.org/journal-of-marketing-research/" target="_blank" rel="noopener">Journal of Marketing Research</a>, each episode features candid conversations with authors about the origin stories, methodological choices, and revision struggles behind their published work.</p>
+      <a class="about-more" href="about.html">Meet the hosts <span class="material-symbols-outlined">arrow_forward</span></a>
+    </div>
+    <div class="host-list">
+      <div class="host-card">
+        <div class="host-avatar">BG</div>
+        <div>
+          <div class="host-name">Brett Gordon</div>
+          <div class="host-role">Kellstadt Professor of Marketing &middot; Kellogg, Northwestern</div>
+        </div>
+      </div>
+      <div class="host-card">
+        <div class="host-avatar">KW</div>
+        <div>
+          <div class="host-name">Karen Winterich</div>
+          <div class="host-role">Susman Professor in Sustainability &middot; Smeal, Penn State</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-text">A production of the <a href="https://www.ama.org/journal-of-marketing-research/" target="_blank" rel="noopener">Journal of Marketing Research</a></span>
+    <span class="footer-text"><a href="about.html">About</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

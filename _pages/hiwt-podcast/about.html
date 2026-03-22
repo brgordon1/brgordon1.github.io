@@ -1,0 +1,423 @@
+---
+permalink: /hiwt-podcast/about/
+title: "About - HIWT Podcast"
+author_profile: true
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About — How I Wrote This</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --bg: #0B0B0C;
+    --bg-raised: #131315;
+    --bg-card: #18181b;
+    --text: #EBE9E1;
+    --text-dim: #a09d95;
+    --text-faint: #5e5c55;
+    --accent: #e8683a;
+    --accent-subtle: #e8683a18;
+    --border: #222019;
+    --border-light: #2f2d26;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Lora', serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11,11,12,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9rem 1.5rem;
+  }
+
+  .nav-brand {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-dim);
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active { color: var(--accent); }
+
+  .page-content {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 4rem;
+  }
+
+  .page-title {
+    font-family: 'EB Garamond', serif;
+    font-size: clamp(2rem, 4.5vw, 2.8rem);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.6rem;
+  }
+
+  .page-subtitle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-faint);
+    margin-bottom: 2.5rem;
+  }
+
+  .about-intro {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-dim);
+    margin-bottom: 3rem;
+    max-width: 620px;
+  }
+
+  .about-intro em { color: var(--text); font-style: italic; }
+
+  .styled-link {
+    color: var(--accent);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .styled-link:hover { border-bottom-color: var(--accent); }
+
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 0 0 3rem;
+  }
+
+  /* HOSTS SIDE BY SIDE */
+  .hosts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .host-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .host-photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 4px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .host-photo-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 4px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+
+  .host-photo-placeholder .initials {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: var(--text-dim);
+  }
+
+  .host-photo-placeholder .placeholder-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-faint);
+  }
+
+  .host-detail-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .host-detail-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+
+  .host-bio {
+    font-size: 0.88rem;
+    line-height: 1.75;
+    color: var(--text-dim);
+  }
+
+  .host-bio p { margin-bottom: 0.8rem; }
+  .host-bio p:last-child { margin-bottom: 0; }
+
+  .host-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .host-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.56rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-faint);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.2s;
+  }
+
+  .host-link:hover { color: var(--accent); }
+  .host-link .material-symbols-outlined { font-size: 0.8rem; }
+
+  /* PODCAST INFO */
+  .podcast-info {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .info-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  .info-text {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--text-dim);
+    max-width: 560px;
+  }
+
+  .listen-links {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .listen-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 1.2rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: 1px solid var(--border-light);
+    transition: all 0.25s ease;
+  }
+
+  .listen-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-subtle);
+  }
+
+  .listen-link .material-symbols-outlined {
+    font-size: 0.95rem;
+    font-variation-settings: 'FILL' 1;
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 1.5rem;
+  }
+
+  .footer-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .footer-text a { color: var(--text-dim); transition: color 0.2s; }
+  .footer-text a:hover { color: var(--accent); }
+
+  @media (max-width: 640px) {
+    .hosts-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    .footer-inner { flex-direction: column; gap: 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">How I Wrote This</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Episodes</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page-content">
+
+  <h1 class="page-title">About the Podcast</h1>
+  <p class="page-subtitle">A Journal of Marketing Research Production</p>
+
+  <div class="about-intro">
+    <p><em>How I Wrote This</em> is a podcast from the <a class="styled-link" href="https://www.ama.org/journal-of-marketing-research/" target="_blank" rel="noopener">Journal of Marketing Research</a> that goes behind the scenes of academic marketing papers. Each episode, co-hosts Brett Gordon and Karen Winterich sit down with the authors of a recently published paper to hear the real story: how the idea took shape, what methodological challenges they faced, and how they navigated the publication process.</p>
+  </div>
+
+  <hr class="section-divider"/>
+
+  <div class="hosts-grid">
+
+    <!-- Brett Gordon -->
+    <div class="host-column">
+      <!-- Replace placeholder with: <img class="host-photo" src="https://www.kellogg.northwestern.edu/-/media/images/web2022/people/b/brett-gordon/brett-gordon-kellogg-faculty-874x728.jpg?rev=d2de690cd7dc4679a58cb82b12d72540&sc_lang=en&w=1305&hash=0AC399CB4C6C07A7486FA5A4C5711C68" alt="Brett Gordon"/> -->
+      <div class="host-photo-placeholder">
+        <span class="initials">BG</span>
+        <span class="placeholder-label">Photo</span>
+      </div>
+      <h2 class="host-detail-name">Brett Gordon</h2>
+      <p class="host-detail-title">
+        Charles H. Kellstadt Professor of Marketing<br/>
+        Kellogg School of Management, Northwestern University<br/>
+        Co-Editor, Journal of Marketing Research
+      </p>
+      <div class="host-bio">
+        <p>Brett Gordon is a quantitative marketing researcher whose work spans pricing, advertising, promotions, and retailing, drawing on methods from causal inference, machine learning, and empirical industrial organization. He frequently partners with firms to measure and improve marketing effectiveness, and his recent work focuses on assessing and developing methods for measuring the effects of digital advertising.</p>
+        <p>His research has been published in the <em>American Economic Review</em>, <em>Journal of Political Economy</em>, <em>Marketing Science</em>, <em>Management Science</em>, and the <em>Journal of Marketing Research</em>. He is a three-time winner of the ISMS John D. C. Little Award and received the Robert D. Buzzell Best Paper Award from the Marketing Science Institute.</p>
+        <p>Before joining Kellogg in 2014, he was at Columbia Business School and held visiting positions at Chicago Booth and Stanford GSB. He holds a Ph.D. in Economics from Carnegie Mellon University.</p>
+      </div>
+      <div class="host-links">
+        <a class="host-link" href="https://www.kellogg.northwestern.edu/academics-research/faculty/gordon_brett" target="_blank" rel="noopener">
+          <span class="material-symbols-outlined">school</span> Kellogg Profile
+        </a>
+        <a class="host-link" href="https://scholar.google.com/citations?user=iZnvpJYAAAAJ" target="_blank" rel="noopener">
+          <span class="material-symbols-outlined">menu_book</span> Google Scholar
+        </a>
+      </div>
+    </div>
+
+    <!-- Karen Winterich -->
+    <div class="host-column">
+      <!-- Replace placeholder with: <img class="host-photo" src="karen-winterich.jpg" alt="Karen Winterich"/> -->
+      <div class="host-photo-placeholder">
+        <span class="initials">KW</span>
+        <span class="placeholder-label">Photo</span>
+      </div>
+      <h2 class="host-detail-name">Karen Winterich</h2>
+      <p class="host-detail-title">
+        Gerald I. Susman Professor in Sustainability &amp; Professor of Marketing<br/>
+        Smeal College of Business, Penn State University<br/>
+        Co-Editor, Journal of Marketing Research
+      </p>
+      <div class="host-bio">
+        <p>Karen Winterich is a consumer behavior researcher whose work examines how consumers&rsquo; social identities influence charitable giving, sustainable behavior, and moral judgments in the marketplace. Her research on recycling, product disposition, and green consumption has made her a leading voice in sustainability marketing.</p>
+        <p>Her work has appeared in the <em>Journal of Consumer Research</em>, <em>Journal of Marketing Research</em>, <em>Journal of Marketing</em>, and the <em>Journal of the Academy of Marketing Science</em>. She received the Distinguished Scientific Contribution Award from the Society for Consumer Psychology and is a Distinguished Winner of the AMA-EBSCO Responsible Research in Marketing Award.</p>
+        <p>She is a past president of the AMA Academic Council, currently serves on the AMA Board of Directors, and was recently named a Penn State Distinguished Professor. She holds a Ph.D. from the University of Pittsburgh.</p>
+      </div>
+      <div class="host-links">
+        <a class="host-link" href="https://directory.smeal.psu.edu/kpw2" target="_blank" rel="noopener">
+          <span class="material-symbols-outlined">school</span> Smeal Profile
+        </a>
+        <a class="host-link" href="https://scholar.google.com/citations?user=ZiM25AcAAAAJ" target="_blank" rel="noopener">
+          <span class="material-symbols-outlined">menu_book</span> Google Scholar
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Podcast Info -->
+  <div class="podcast-info">
+    <h3 class="info-title">Listen &amp; Subscribe</h3>
+    <p class="info-text">New episodes are released monthly during the academic year. The podcast is available on all major platforms.</p>
+    <div class="listen-links">
+      <a class="listen-link" href="https://open.spotify.com/show/3LrmMlwz4gh4dV3eVufXvV" target="_blank" rel="noopener">
+        <span class="material-symbols-outlined">play_circle</span> Spotify
+      </a>
+      <a class="listen-link" href="https://podcasts.apple.com/us/podcast/how-i-wrote-this/id1734070058" target="_blank" rel="noopener">
+        <span class="material-symbols-outlined">podcasts</span> Apple Podcasts
+      </a>
+      <a class="listen-link" href="https://www.youtube.com/@HowIWroteThis" target="_blank" rel="noopener">
+        <span class="material-symbols-outlined">smart_display</span> YouTube
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-text">A production of the <a href="https://www.ama.org/journal-of-marketing-research/" target="_blank" rel="noopener">Journal of Marketing Research</a></span>
+    <span class="footer-text"><a href="index.html">Episodes</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

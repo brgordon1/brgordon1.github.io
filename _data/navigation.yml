@@ -25,6 +25,9 @@ main:
     
   - title: "CV"
     url: /files/Brett_Gordon_CV.pdf
+
+  - title: "HIWT Podcast"
+    url: /hiwt-podcast/
     
   # - title: "CV"
   #   url: /cv-json/
