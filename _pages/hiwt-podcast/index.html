@@ -139,7 +139,7 @@ author_profile: true
   .topbar-nav {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.7rem;
     flex-wrap: wrap;
   }
 
@@ -147,17 +147,28 @@ author_profile: true
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: transparent;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.58rem;
     text-transform: uppercase;
     letter-spacing: 0.14em;
     color: var(--text-faint);
-    transition: color 0.2s;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
   }
 
-  .page-link:hover,
+  .page-link:hover {
+    color: var(--text);
+    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.02);
+  }
+
   .page-link.active {
     color: var(--accent);
+    border-color: rgba(232, 104, 58, 0.22);
+    background: rgba(232, 104, 58, 0.08);
   }
 
   .page-link .material-symbols-outlined {
@@ -181,6 +192,10 @@ author_profile: true
 
   .hero-main {
     min-width: 0;
+    display: grid;
+    grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
   }
 
   .hero-aside {
@@ -191,7 +206,7 @@ author_profile: true
 
   .cover-art-wrapper {
     width: 100%;
-    max-width: 480px;
+    max-width: 440px;
     position: relative;
   }
 
@@ -215,7 +230,6 @@ author_profile: true
   }
 
   .hero-text {
-    margin-top: 2.2rem;
     max-width: 640px;
   }
 
@@ -272,10 +286,33 @@ author_profile: true
     font-style: italic;
   }
 
+  .hero-meta {
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  .hero-meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.56rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-faint);
+  }
+
+  .hero-meta-item .material-symbols-outlined {
+    font-size: 0.82rem;
+    color: var(--accent);
+  }
+
   .listen-links {
     display: flex;
     gap: 0.6rem;
-    margin-top: 1.8rem;
+    margin-top: 1.35rem;
     flex-wrap: wrap;
   }
 
@@ -486,11 +523,20 @@ author_profile: true
     box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
   }
 
+  .about-card-kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.54rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--accent);
+  }
+
   .about-card-title {
     font-family: 'EB Garamond', serif;
     font-size: 1.35rem;
     font-style: italic;
     font-weight: 500;
+    margin-top: 0.45rem;
   }
 
   .about-card-copy {
@@ -583,6 +629,10 @@ author_profile: true
       grid-template-columns: 1fr;
       gap: 1.5rem;
     }
+    .hero-main {
+      grid-template-columns: 1fr;
+      gap: 1.4rem;
+    }
     .hero {
       padding-top: 2rem;
     }
@@ -590,7 +640,7 @@ author_profile: true
       position: static;
     }
     .cover-art-wrapper { max-width: 90%; }
-    .hero-text { margin-top: 1.8rem; }
+    .hero-text { margin-top: 0; }
     .episode { grid-template-columns: 44px 1fr auto; gap: 0.7rem; }
     .episode-main { grid-template-columns: 44px 1fr auto; gap: 0.7rem; }
     .ep-thumb { width: 44px; height: 44px; }
@@ -634,6 +684,14 @@ author_profile: true
           <h1 class="hero-title">How I Wrote This</h1>
           <p class="hero-hosts">With Brett Gordon &amp; Karen Winterich</p>
           <p class="hero-tagline">Behind the research process, one paper at a time</p>
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <span class="material-symbols-outlined">calendar_month</span> New episodes during the academic year
+            </div>
+            <div class="hero-meta-item">
+              <span class="material-symbols-outlined">library_books</span> Journal of Marketing Research
+            </div>
+          </div>
           <p class="hero-description">
             &ldquo;Publish or perish&rdquo; &mdash; it&rsquo;s a maxim that academics live by. But how does a paper become a publication? In each episode, marketing professors Brett Gordon and Karen Winterich speak with the authors of an academic marketing paper to get the backstory of how that paper came to be.
           </p>
@@ -734,6 +792,7 @@ author_profile: true
 
   <aside class="hero-aside">
     <section class="about-card">
+      <div class="about-card-kicker">Why listen</div>
       <h2 class="about-card-title">About the Podcast</h2>
       <div class="about-card-copy">
         <p>How does a rough idea become a published paper? How do researchers navigate the bumps and bruises of the publication process? <em>How I Wrote This</em> pulls back the curtain on academic marketing research &mdash; one paper at a time.</p>
