@@ -131,37 +131,7 @@ author_profile: true
   .topbar-nav {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .page-content {
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 3.5rem 1.5rem 4rem;
-  }
-
-  .page-title {
-    font-family: 'EB Garamond', serif;
-    font-size: clamp(2rem, 4.5vw, 2.8rem);
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.6rem;
-  }
-
-  .page-subtitle {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--text-faint);
-    margin-bottom: 2.5rem;
-  }
-
-  .page-links {
-    display: flex;
-    gap: 0.75rem;
-    margin-bottom: 2rem;
+    gap: 0.7rem;
     flex-wrap: wrap;
   }
 
@@ -169,100 +139,68 @@ author_profile: true
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: transparent;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.58rem;
     text-transform: uppercase;
     letter-spacing: 0.14em;
     color: var(--text-faint);
-    transition: color 0.2s;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
   }
 
-  .page-link:hover,
+  .page-link:hover {
+    color: var(--text);
+    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.02);
+  }
+
   .page-link.active {
     color: var(--accent);
+    border-color: rgba(232, 104, 58, 0.22);
+    background: rgba(232, 104, 58, 0.08);
   }
 
   .page-link .material-symbols-outlined {
     font-size: 0.9rem;
   }
 
-  .about-intro {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: var(--text-dim);
-    margin-bottom: 3rem;
-    max-width: 620px;
+  .page-content {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
   }
 
-  .about-intro em { color: var(--text); font-style: italic; }
-
-  .styled-link {
-    color: var(--accent);
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s;
-  }
-  .styled-link:hover { border-bottom-color: var(--accent); }
-
-  .section-divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 0 0 3rem;
-  }
-
-  /* HOSTS SIDE BY SIDE */
   .hosts-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+    gap: 2.2rem;
   }
 
   .host-column {
     display: flex;
     flex-direction: column;
+    padding: 0 0 1rem;
   }
 
   .host-photo {
     width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: 4px;
+    aspect-ratio: 0.95 / 1;
+    border-radius: 10px;
     object-fit: cover;
     display: block;
-  }
-
-  .host-photo-placeholder {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: 4px;
-    background: var(--bg-card);
     border: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.3rem;
-  }
-
-  .host-photo-placeholder .initials {
-    font-family: 'EB Garamond', serif;
-    font-size: 2.8rem;
-    font-weight: 500;
-    color: var(--text-dim);
-  }
-
-  .host-photo-placeholder .placeholder-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-faint);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
   }
 
   .host-detail-name {
     font-family: 'EB Garamond', serif;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 500;
-    margin-top: 1.2rem;
-    margin-bottom: 0.3rem;
+    margin-top: 1.3rem;
+    margin-bottom: 0.35rem;
   }
 
   .host-detail-title {
@@ -306,7 +244,6 @@ author_profile: true
   .host-link:hover { color: var(--accent); }
   .host-link .material-symbols-outlined { font-size: 0.8rem; }
 
-  /* PODCAST INFO */
   .podcast-info {
     margin-top: 3rem;
     padding-top: 3rem;
@@ -366,6 +303,9 @@ author_profile: true
       flex-direction: column;
       align-items: flex-start;
     }
+    .page-content {
+      padding: 2rem 1rem 3rem;
+    }
     .hosts-grid {
       grid-template-columns: 1fr;
       gap: 3rem;
@@ -394,33 +334,10 @@ author_profile: true
 </header>
 
 <main class="page-content">
-
-  <h1 class="page-title">About the Podcast</h1>
-  <p class="page-subtitle">A Journal of Marketing Research Production</p>
-  <div class="page-links">
-    <a class="page-link" href="{{ '/hiwt-podcast/' | relative_url }}">
-      <span class="material-symbols-outlined">arrow_back</span> Episodes
-    </a>
-    <a class="page-link active" href="{{ '/hiwt-podcast/about.html' | relative_url }}">
-      <span class="material-symbols-outlined">info</span> About
-    </a>
-  </div>
-
-  <div class="about-intro">
-    <p><em>How I Wrote This</em> is a podcast from the <a class="styled-link" href="https://www.ama.org/journal-of-marketing-research/" target="_blank" rel="noopener">Journal of Marketing Research</a> that goes behind the scenes of academic marketing papers. Each episode, co-hosts Brett Gordon and Karen Winterich sit down with the authors of a recently published paper to hear the real story: how the idea took shape, what methodological challenges they faced, and how they navigated the publication process.</p>
-  </div>
-
-  <hr class="section-divider"/>
-
   <div class="hosts-grid">
 
-    <!-- Brett Gordon -->
     <div class="host-column">
-      <!-- Replace placeholder with: <img class="host-photo" src="https://www.kellogg.northwestern.edu/-/media/images/web2022/people/b/brett-gordon/brett-gordon-kellogg-faculty-874x728.jpg?rev=d2de690cd7dc4679a58cb82b12d72540&sc_lang=en&w=1305&hash=0AC399CB4C6C07A7486FA5A4C5711C68" alt="Brett Gordon"/> -->
-      <div class="host-photo-placeholder">
-        <span class="initials">BG</span>
-        <span class="placeholder-label">Photo</span>
-      </div>
+      <img class="host-photo" src="https://www.kellogg.northwestern.edu/-/media/images/web2022/people/b/brett-gordon/brett-gordon-kellogg-faculty-874x728.jpg?rev=d2de690cd7dc4679a58cb82b12d72540&amp;sc_lang=en&amp;w=1305&amp;hash=0AC399CB4C6C07A7486FA5A4C5711C68" alt="Brett Gordon"/>
       <h2 class="host-detail-name">Brett Gordon</h2>
       <p class="host-detail-title">
         Charles H. Kellstadt Professor of Marketing<br/>
@@ -445,13 +362,8 @@ author_profile: true
       </div>
     </div>
 
-    <!-- Karen Winterich -->
     <div class="host-column">
-      <!-- Replace placeholder with: <img class="host-photo" src="karen-winterich.jpg" alt="Karen Winterich"/> -->
-      <div class="host-photo-placeholder">
-        <span class="initials">KW</span>
-        <span class="placeholder-label">Photo</span>
-      </div>
+      <img class="host-photo" src="https://media.smeal.psu.edu/content_php/directory/photos/kpw2-web.jpg" alt="Karen Winterich"/>
       <h2 class="host-detail-name">Karen Winterich</h2>
       <p class="host-detail-title">
         Gerald I. Susman Professor in Sustainability &amp; Professor of Marketing<br/>
