@@ -183,17 +183,25 @@ author_profile: true
     display: flex;
     flex-direction: column;
     padding: 0 0 1rem;
+    align-items: flex-start;
+  }
+
+  .host-photo-frame {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
   }
 
   .host-photo {
     width: auto;
-    max-width: 100%;
-    height: 250px;
+    max-width: min(100%, 300px);
+    max-height: 250px;
+    height: auto;
     border-radius: 10px;
-    object-fit: contain;
+    object-fit: cover;
     display: block;
-    border: 1px solid var(--border);
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
   }
 
   .host-detail-name {
@@ -206,7 +214,7 @@ author_profile: true
 
   .host-detail-title {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.58rem;
+    font-size: 0.68rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--accent);
@@ -311,9 +319,12 @@ author_profile: true
       grid-template-columns: 1fr;
       gap: 3rem;
     }
+    .host-photo-frame {
+      height: auto;
+    }
     .host-photo {
       width: min(100%, 300px);
-      height: auto;
+      max-height: none;
     }
   }
 </style>
@@ -342,7 +353,9 @@ author_profile: true
   <div class="hosts-grid">
 
     <div class="host-column">
-      <img class="host-photo" src="https://www.kellogg.northwestern.edu/-/media/images/web2022/people/b/brett-gordon/brett-gordon-kellogg-faculty-874x728.jpg?rev=d2de690cd7dc4679a58cb82b12d72540&amp;sc_lang=en&amp;w=1305&amp;hash=0AC399CB4C6C07A7486FA5A4C5711C68" alt="Brett Gordon"/>
+      <div class="host-photo-frame">
+        <img class="host-photo" src="https://www.kellogg.northwestern.edu/-/media/images/web2022/people/b/brett-gordon/brett-gordon-kellogg-faculty-874x728.jpg?rev=d2de690cd7dc4679a58cb82b12d72540&amp;sc_lang=en&amp;w=1305&amp;hash=0AC399CB4C6C07A7486FA5A4C5711C68" alt="Brett Gordon"/>
+      </div>
       <h2 class="host-detail-name">Brett Gordon</h2>
       <p class="host-detail-title">
         Charles H. Kellstadt Professor of Marketing<br/>
@@ -368,7 +381,9 @@ author_profile: true
     </div>
 
     <div class="host-column">
-      <img class="host-photo" src="https://media.smeal.psu.edu/content_php/directory/photos/kpw2-web.jpg" alt="Karen Winterich"/>
+      <div class="host-photo-frame">
+        <img class="host-photo" src="https://media.smeal.psu.edu/content_php/directory/photos/kpw2-web.jpg" alt="Karen Winterich"/>
+      </div>
       <h2 class="host-detail-name">Karen Winterich</h2>
       <p class="host-detail-title">
         Gerald I. Susman Professor in Sustainability &amp; Professor of Marketing<br/>
