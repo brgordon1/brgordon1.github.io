@@ -276,7 +276,7 @@ author_profile: true
 
   .summary-kicker {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.62rem;
+    font-size: 0.68rem;
     text-transform: uppercase;
     letter-spacing: 0.16em;
     color: var(--accent);
@@ -377,10 +377,19 @@ author_profile: true
 
   .episode--embedded {
     display: block;
+    margin-bottom: 0.2rem;
+    padding: 1rem 0.85rem 1.15rem;
+    border: 1px solid rgba(232, 104, 58, 0.22);
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(232, 104, 58, 0.06), rgba(255, 255, 255, 0.015));
   }
 
   .episode--embedded:hover {
     background: transparent;
+  }
+
+  .episode--embedded:hover {
+    background: linear-gradient(180deg, rgba(232, 104, 58, 0.07), rgba(255, 255, 255, 0.02));
   }
 
   .episode-main {
@@ -432,12 +441,26 @@ author_profile: true
     transition: color 0.2s;
   }
 
+  .ep-kicker {
+    display: inline-flex;
+    margin-bottom: 0.45rem;
+    padding: 0.2rem 0.48rem;
+    border: 1px solid rgba(232, 104, 58, 0.28);
+    border-radius: 999px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.52rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    background: rgba(232, 104, 58, 0.08);
+  }
+
   .ep-meta {
     display: flex;
     gap: 0.8rem;
     margin-top: 0.3rem;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.58rem;
+    font-size: 0.64rem;
     color: var(--text-faint);
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -680,6 +703,7 @@ author_profile: true
         <div class="episode-main">
           <div class="ep-thumb ep-thumb--grocery"><span class="material-symbols-outlined">shopping_cart</span></div>
           <div class="ep-body">
+            <div class="ep-kicker">Latest episode</div>
             <div class="ep-title">The No Hunger Games with Sylvia Hristakeva, Jura Liaukonyte &amp; Leo Feler</div>
             <div class="ep-meta"><span>Ep 27</span><span>Mar 2026</span><span>58 min</span></div>
             <p class="ep-desc">GLP-1 drugs like Ozempic are disrupting the grocery aisle. This study linked GLP-1 usage surveys to 150,000 households&rsquo; purchase data and found grocery spending drops about 5% within six months.</p>
