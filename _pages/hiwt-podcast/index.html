@@ -200,9 +200,15 @@ author_profile: true
   }
 
   .cover-art-wrapper {
+    order: 2;
     width: 100%;
     max-width: 440px;
     position: relative;
+    padding: 12px;
+    border: 1px solid rgba(181, 139, 97, 0.24);
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(181, 139, 97, 0.08), rgba(255, 255, 255, 0.015));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
   }
 
   .cover-art-wrapper::after {
@@ -258,6 +264,7 @@ author_profile: true
   }
 
   .hero-details {
+    order: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -616,6 +623,12 @@ author_profile: true
     .hero-main {
       grid-template-columns: 1fr;
       gap: 1.4rem;
+    }
+    .cover-art-wrapper {
+      order: 1;
+    }
+    .hero-details {
+      order: 2;
     }
     .hero {
       padding-top: 2rem;
