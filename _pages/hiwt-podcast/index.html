@@ -578,6 +578,18 @@ author_profile: true
     letter-spacing: 0.06em;
   }
 
+  .ep-host-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.12rem 0.45rem;
+    border: 1px solid var(--border-light);
+    border-radius: 999px;
+    font-size: 0.58rem;
+    letter-spacing: 0.06em;
+    color: var(--text-faint);
+    margin-left: auto;
+  }
+
   .ep-desc {
     margin-top: 0.5rem;
     font-size: 0.93rem;
@@ -1138,6 +1150,22 @@ author_profile: true
 </div>
 
 <script>
+  // Inject host tags into each episode's meta line
+  document.querySelectorAll('.episode-list .episode').forEach(function(ep) {
+    var hosts = (ep.getAttribute('data-host') || '').split(' ');
+    var label = (hosts.indexOf('brett') !== -1 && hosts.indexOf('karen') !== -1)
+      ? 'Brett &amp; Karen'
+      : hosts.indexOf('brett') !== -1 ? 'Brett' : 'Karen';
+    var meta = ep.querySelector('.ep-meta');
+    if (meta) {
+      var tag = document.createElement('span');
+      tag.className = 'ep-host-tag';
+      tag.innerHTML = label;
+      meta.appendChild(tag);
+    }
+  });
+
+  // Filter buttons
   document.querySelector('.filter-bar').addEventListener('click', function(e) {
     var btn = e.target.closest('.filter-btn');
     if (!btn) return;
