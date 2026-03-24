@@ -587,7 +587,6 @@ author_profile: true
     font-size: 0.58rem;
     letter-spacing: 0.06em;
     color: var(--text-faint);
-    margin-left: auto;
   }
 
   .ep-desc {
@@ -1158,10 +1157,15 @@ author_profile: true
       : hosts.indexOf('brett') !== -1 ? 'Brett' : 'Karen';
     var meta = ep.querySelector('.ep-meta');
     if (meta) {
+      var firstSpan = meta.querySelector('span');
       var tag = document.createElement('span');
       tag.className = 'ep-host-tag';
       tag.innerHTML = label;
-      meta.appendChild(tag);
+      if (firstSpan && firstSpan.nextSibling) {
+        meta.insertBefore(tag, firstSpan.nextSibling);
+      } else {
+        meta.appendChild(tag);
+      }
     }
   });
 
