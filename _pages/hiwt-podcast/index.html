@@ -249,6 +249,15 @@ author_profile: true
     margin-top: 0.8rem;
   }
 
+  .hero-hosts a {
+    color: inherit;
+    transition: color 0.2s;
+  }
+
+  .hero-hosts a:hover {
+    color: var(--accent-hover);
+  }
+
   .hero-tagline {
      font-size: 1.06rem;
      line-height: 1.7;
@@ -423,6 +432,41 @@ author_profile: true
   }
 
   .section-link:hover { color: var(--accent); }
+
+  .filter-bar {
+    display: flex;
+    gap: 0.45rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .filter-btn {
+    appearance: none;
+    border: 1px solid var(--border-light);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-faint);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.4rem 0.85rem;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+  }
+
+  .filter-btn:hover {
+    color: var(--text);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .filter-btn.active {
+    color: var(--accent);
+    border-color: rgba(181, 139, 97, 0.26);
+    background: rgba(181, 139, 97, 0.1);
+  }
+
+  .episode.hidden { display: none; }
 
   .episode-list { display: flex; flex-direction: column; }
 
@@ -624,6 +668,15 @@ author_profile: true
     font-weight: 500;
   }
 
+  .host-name a {
+    color: inherit;
+    transition: color 0.2s;
+  }
+
+  .host-name a:hover {
+    color: var(--accent);
+  }
+
   .host-role {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 0.58rem;
@@ -680,7 +733,7 @@ author_profile: true
     }
     .cover-art-wrapper { max-width: 90%; }
     .podcast-summary {
-      padding: 1.2rem;
+      padding: 1.2rem 0 0;
     }
     .podcast-summary-grid {
       grid-template-columns: 1fr;
@@ -710,6 +763,9 @@ author_profile: true
       <a class="page-link" href="{{ '/hiwt-podcast/about.html' | relative_url }}">
         <span class="material-symbols-outlined">info</span> About
       </a>
+      <a class="page-link" href="mailto:hiwtpod@gmail.com">
+        <span class="material-symbols-outlined">mail</span> Contact
+      </a>
     </nav>
   </div>
 </header>
@@ -722,7 +778,7 @@ author_profile: true
       </div>
       <div class="hero-details">
         <h1 class="hero-title">How I Wrote This</h1>
-        <p class="hero-hosts">With Brett Gordon &amp; Karen Winterich</p>
+        <p class="hero-hosts">With <a href="https://www.kellogg.northwestern.edu/academics-research/faculty/gordon_brett" target="_blank" rel="noopener">Brett Gordon</a> &amp; <a href="https://directory.smeal.psu.edu/kpw2" target="_blank" rel="noopener">Karen Winterich</a></p>
         <p class="hero-tagline">A podcast about how academic marketing papers go from first idea to publication.</p>
         <div class="listen-links">
           <a class="listen-link" href="https://open.spotify.com/show/3LrmMlwz4gh4dV3eVufXvV" target="_blank" rel="noopener">
@@ -754,14 +810,14 @@ author_profile: true
             <div class="host-card">
               <div class="host-avatar">BG</div>
               <div>
-                <div class="host-name">Brett Gordon</div>
+                <div class="host-name"><a href="https://www.kellogg.northwestern.edu/academics-research/faculty/gordon_brett" target="_blank" rel="noopener">Brett Gordon</a></div>
                 <div class="host-role">Kellogg, Northwestern</div>
               </div>
             </div>
             <div class="host-card">
               <div class="host-avatar">KW</div>
               <div>
-                <div class="host-name">Karen Winterich</div>
+                <div class="host-name"><a href="https://directory.smeal.psu.edu/kpw2" target="_blank" rel="noopener">Karen Winterich</a></div>
                 <div class="host-role">Smeal, Penn State</div>
               </div>
             </div>
@@ -780,8 +836,14 @@ author_profile: true
       <a class="section-link" href="https://open.spotify.com/show/3LrmMlwz4gh4dV3eVufXvV" target="_blank" rel="noopener">Listen on Spotify &rarr;</a>
     </div>
 
+    <div class="filter-bar" role="group" aria-label="Filter episodes by host">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="brett">Brett</button>
+      <button class="filter-btn" data-filter="karen">Karen</button>
+    </div>
+
     <div class="episode-list">
-      <article class="episode episode--embedded" id="latest-episode">
+      <article class="episode episode--embedded" id="latest-episode" data-host="brett">
         <div class="episode-main">
           <div class="ep-thumb ep-thumb--grocery"><span class="material-symbols-outlined">shopping_cart</span></div>
           <div class="ep-body">
@@ -800,7 +862,7 @@ author_profile: true
         </div>
       </article>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--26---AI--Authorship--and-the-Editorial-Process-e3eoas2" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--26---AI--Authorship--and-the-Editorial-Process-e3eoas2" target="_blank" rel="noopener" data-host="brett karen">
         <div class="ep-thumb ep-thumb--ai"><span class="material-symbols-outlined">psychology</span></div>
         <div class="ep-body">
           <div class="ep-title">AI, Authorship, and the Editorial Process</div>
@@ -810,7 +872,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--25---Persevering-from-the-Idea-Nugget-to-Publication-with-Yuechen-Wu--Jared-Watson--and-Ali-Faraji-Rad-e3dale2" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--25---Persevering-from-the-Idea-Nugget-to-Publication-with-Yuechen-Wu--Jared-Watson--and-Ali-Faraji-Rad-e3dale2" target="_blank" rel="noopener" data-host="karen">
         <div class="ep-thumb ep-thumb--romance"><span class="material-symbols-outlined">favorite</span></div>
         <div class="ep-body">
           <div class="ep-title">Persevering from the &ldquo;Idea Nugget&rdquo; to Publication with Yuechen Wu, Jared Watson &amp; Ali Faraji-Rad</div>
@@ -820,7 +882,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--24---Customer-Based-Corporate-Valuation-with-Dan-McCarthy-and-Peter-Fader-e3c9b7g" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--24---Customer-Based-Corporate-Valuation-with-Dan-McCarthy-and-Peter-Fader-e3c9b7g" target="_blank" rel="noopener" data-host="brett">
         <div class="ep-thumb ep-thumb--valuation"><span class="material-symbols-outlined">trending_up</span></div>
         <div class="ep-body">
           <div class="ep-title">Customer-Based Corporate Valuation with Dan McCarthy &amp; Peter Fader</div>
@@ -830,7 +892,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--23---How-Fatal-School-Shootings-Impact-Local-Economies-e3b1jd0" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--23---How-Fatal-School-Shootings-Impact-Local-Economies-e3b1jd0" target="_blank" rel="noopener" data-host="karen">
         <div class="ep-thumb ep-thumb--community"><span class="material-symbols-outlined">storefront</span></div>
         <div class="ep-body">
           <div class="ep-title">How Fatal School Shootings Impact Local Economies</div>
@@ -840,7 +902,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--22---Frugality-is-Hard-to-Afford-with-Yesim-Orhun-and-Mike-Palazzolo-e39lpc9" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--22---Frugality-is-Hard-to-Afford-with-Yesim-Orhun-and-Mike-Palazzolo-e39lpc9" target="_blank" rel="noopener" data-host="brett">
         <div class="ep-thumb ep-thumb--frugality"><span class="material-symbols-outlined">savings</span></div>
         <div class="ep-body">
           <div class="ep-title">Frugality Is Hard to Afford with Yesim Orhun &amp; Mike Palazzolo</div>
@@ -850,7 +912,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--21---Brands-Speaking-Slang-with-Bryce-Pyrah-and-Alice-Wang-e38g2pu" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--21---Brands-Speaking-Slang-with-Bryce-Pyrah-and-Alice-Wang-e38g2pu" target="_blank" rel="noopener" data-host="karen">
         <div class="ep-thumb ep-thumb--ai"><span class="material-symbols-outlined">record_voice_over</span></div>
         <div class="ep-body">
           <div class="ep-title">Brands Speaking Slang with Bryce Pyrah &amp; Alice Wang</div>
@@ -860,7 +922,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--20---How-I-Wrote-This--Live-in-Chicago-e37f433" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--20---How-I-Wrote-This--Live-in-Chicago-e37f433" target="_blank" rel="noopener" data-host="brett karen">
         <div class="ep-thumb ep-thumb--valuation"><span class="material-symbols-outlined">mic</span></div>
         <div class="ep-body">
           <div class="ep-title">How I Wrote This, Live in Chicago!</div>
@@ -870,7 +932,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--19-Attention-Spillovers-from-News-to-Ads-with-Andrey-Simonov--Tommaso-Valletti--and-Andre-Veiga-e32fr4c" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--19-Attention-Spillovers-from-News-to-Ads-with-Andrey-Simonov--Tommaso-Valletti--and-Andre-Veiga-e32fr4c" target="_blank" rel="noopener" data-host="brett">
         <div class="ep-thumb ep-thumb--community"><span class="material-symbols-outlined">visibility</span></div>
         <div class="ep-body">
           <div class="ep-title">Attention Spillovers from News to Ads with Andrey Simonov, Tommaso Valletti &amp; Andre Veiga</div>
@@ -880,7 +942,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--18---Insights-from-Social-Media-Post-Histories-with-Verena-Schoenmueller-and-Simon-Blanchard-e31b867" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--18---Insights-from-Social-Media-Post-Histories-with-Verena-Schoenmueller-and-Simon-Blanchard-e31b867" target="_blank" rel="noopener" data-host="karen">
         <div class="ep-thumb ep-thumb--grocery"><span class="material-symbols-outlined">feed</span></div>
         <div class="ep-body">
           <div class="ep-title">Insights from Social Media Post Histories with Verena Schoenmueller &amp; Simon Blanchard</div>
@@ -890,7 +952,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--17-Canary-Categories-with-Ayelet-Israeli-and-Eric-Anderson-e2vv3dq" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--17-Canary-Categories-with-Ayelet-Israeli-and-Eric-Anderson-e2vv3dq" target="_blank" rel="noopener" data-host="brett">
         <div class="ep-thumb ep-thumb--frugality"><span class="material-symbols-outlined">warning</span></div>
         <div class="ep-body">
           <div class="ep-title">Canary Categories with Ayelet Israeli &amp; Eric Anderson</div>
@@ -900,7 +962,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep-16-A-Look-Back-on-Corporate-Social-Responsibility-with-Sankar-Sen-e2uv9j9" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep-16-A-Look-Back-on-Corporate-Social-Responsibility-with-Sankar-Sen-e2uv9j9" target="_blank" rel="noopener" data-host="karen">
         <div class="ep-thumb ep-thumb--romance"><span class="material-symbols-outlined">volunteer_activism</span></div>
         <div class="ep-body">
           <div class="ep-title">A Look Back on Corporate Social Responsibility with Sankar Sen</div>
@@ -910,7 +972,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--15-Mini-Part-2--How-To-Be-A-Good-Reviewer-e2tpiel" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--15-Mini-Part-2--How-To-Be-A-Good-Reviewer-e2tpiel" target="_blank" rel="noopener" data-host="brett karen">
         <div class="ep-thumb ep-thumb--community"><span class="material-symbols-outlined">rate_review</span></div>
         <div class="ep-body">
           <div class="ep-title">Ep. 15 Mini Part 2, How To Be a Good Reviewer</div>
@@ -920,7 +982,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep-15-Mini-Part-1--The-Lives-of-Co-Editors-e2tcaia" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep-15-Mini-Part-1--The-Lives-of-Co-Editors-e2tcaia" target="_blank" rel="noopener" data-host="brett karen">
         <div class="ep-thumb ep-thumb--valuation"><span class="material-symbols-outlined">edit_note</span></div>
         <div class="ep-body">
           <div class="ep-title">Ep. 15 Mini Part 1, The Lives of Co-Editors</div>
@@ -930,7 +992,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--14---Do-Switching-Costs-Make-Markets-Less-Competitive--With-JP-Dube--Gunter-Hitsch--and-Peter-Rossi-e2s45l9" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--14---Do-Switching-Costs-Make-Markets-Less-Competitive--With-JP-Dube--Gunter-Hitsch--and-Peter-Rossi-e2s45l9" target="_blank" rel="noopener" data-host="brett">
         <div class="ep-thumb ep-thumb--ai"><span class="material-symbols-outlined">sync_alt</span></div>
         <div class="ep-body">
           <div class="ep-title">Do Switching Costs Make Markets Less Competitive? with JP Dube, Gunter Hitsch &amp; Peter Rossi</div>
@@ -940,7 +1002,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--13---Rachel-Gershon-and-Zhenling-Jiang-talk-Referral-Contagion-e2qi0ut" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--13---Rachel-Gershon-and-Zhenling-Jiang-talk-Referral-Contagion-e2qi0ut" target="_blank" rel="noopener" data-host="karen">
         <div class="ep-thumb ep-thumb--grocery"><span class="material-symbols-outlined">share</span></div>
         <div class="ep-body">
           <div class="ep-title">Rachel Gershon and Zhenling Jiang Talk Referral Contagion</div>
@@ -950,7 +1012,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--12---Generative-Interpretable-Visual-Design-with-Ankit-Sisodia--Alex-Burnap-and-Vineet-Kumar-e2pecs6" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--12---Generative-Interpretable-Visual-Design-with-Ankit-Sisodia--Alex-Burnap-and-Vineet-Kumar-e2pecs6" target="_blank" rel="noopener" data-host="brett">
         <div class="ep-thumb ep-thumb--community"><span class="material-symbols-outlined">palette</span></div>
         <div class="ep-body">
           <div class="ep-title">Generative Interpretable Visual Design with Ankit Sisodia, Alex Burnap &amp; Vineet Kumar</div>
@@ -960,7 +1022,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--11---Mitigating-Food-Waste-with-Huachao-Gao--He-Michael-Jia--and-Bingxuan-Guo-e2n54jm" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--11---Mitigating-Food-Waste-with-Huachao-Gao--He-Michael-Jia--and-Bingxuan-Guo-e2n54jm" target="_blank" rel="noopener" data-host="karen">
         <div class="ep-thumb ep-thumb--frugality"><span class="material-symbols-outlined">restaurant</span></div>
         <div class="ep-body">
           <div class="ep-title">Mitigating Food Waste with Huachao Gao, He (Michael) Jia &amp; Bingxuan Guo</div>
@@ -970,7 +1032,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep-10---Learning-to-Set-Prices-with-Yufeng-Huang--Paul-Ellickson--and-Mitch-Lovett-e2k74nr" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep-10---Learning-to-Set-Prices-with-Yufeng-Huang--Paul-Ellickson--and-Mitch-Lovett-e2k74nr" target="_blank" rel="noopener" data-host="brett">
         <div class="ep-thumb ep-thumb--valuation"><span class="material-symbols-outlined">sell</span></div>
         <div class="ep-body">
           <div class="ep-title">Learning to Set Prices with Yufeng Huang, Paul Ellickson &amp; Mitch Lovett</div>
@@ -980,7 +1042,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--9---Star-Ratings-and-Research-Transparency-with-Annika-Abell--Carter-Morgan--and-Marisabel-Romero-e2ivvmf" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--9---Star-Ratings-and-Research-Transparency-with-Annika-Abell--Carter-Morgan--and-Marisabel-Romero-e2ivvmf" target="_blank" rel="noopener" data-host="karen">
         <div class="ep-thumb ep-thumb--romance"><span class="material-symbols-outlined">star</span></div>
         <div class="ep-body">
           <div class="ep-title">Star Ratings and Research Transparency with Annika Abell, Carter Morgan &amp; Marisabel Romero</div>
@@ -990,7 +1052,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--8---Joyce-Liu-and-Anirban-Mukhopadhyay-on-Favorite-Possessions-and-Well-Being-e2h9g66" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--8---Joyce-Liu-and-Anirban-Mukhopadhyay-on-Favorite-Possessions-and-Well-Being-e2h9g66" target="_blank" rel="noopener" data-host="karen">
         <div class="ep-thumb ep-thumb--ai"><span class="material-symbols-outlined">auto_awesome</span></div>
         <div class="ep-body">
           <div class="ep-title">Joyce Liu and Anirban Mukhopadhyay on Favorite Possessions and Well-Being</div>
@@ -1000,7 +1062,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--7---Debunking-Misinformation-with-Jessica-Fong--Tong-Guo--and-Anita-Rao-e2gaoe5" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--7---Debunking-Misinformation-with-Jessica-Fong--Tong-Guo--and-Anita-Rao-e2gaoe5" target="_blank" rel="noopener" data-host="brett">
         <div class="ep-thumb ep-thumb--grocery"><span class="material-symbols-outlined">fact_check</span></div>
         <div class="ep-body">
           <div class="ep-title">Debunking Misinformation with Jessica Fong, Tong Guo &amp; Anita Rao</div>
@@ -1010,7 +1072,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--6---From-Friends-to-Co-Authors-with-Kaitlin-Woolley-and-Peggy-Liu-e2e8pec" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--6---From-Friends-to-Co-Authors-with-Kaitlin-Woolley-and-Peggy-Liu-e2e8pec" target="_blank" rel="noopener" data-host="karen">
         <div class="ep-thumb ep-thumb--community"><span class="material-symbols-outlined">group</span></div>
         <div class="ep-body">
           <div class="ep-title">From Friends to Co-Authors with Kaitlin Woolley &amp; Peggy Liu</div>
@@ -1020,7 +1082,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--5-Harvard-Business-Schools-Eva-Ascarza-e2d5avo" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--5-Harvard-Business-Schools-Eva-Ascarza-e2d5avo" target="_blank" rel="noopener" data-host="brett">
         <div class="ep-thumb ep-thumb--valuation"><span class="material-symbols-outlined">school</span></div>
         <div class="ep-body">
           <div class="ep-title">Harvard Business School&rsquo;s Eva Ascarza</div>
@@ -1030,7 +1092,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--4---How-Vicarious-Touch-Made-it-from-Hibernation-to-Publication-e2bc64p" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--4---How-Vicarious-Touch-Made-it-from-Hibernation-to-Publication-e2bc64p" target="_blank" rel="noopener" data-host="karen">
         <div class="ep-thumb ep-thumb--frugality"><span class="material-symbols-outlined">back_hand</span></div>
         <div class="ep-body">
           <div class="ep-title">How Vicarious Touch Made It from Hibernation to Publication</div>
@@ -1040,7 +1102,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--3--Stephan-Seiler--Anna-Tuchman--and-Song-Yao-discuss-Soda-Taxes-e29k49t" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--3--Stephan-Seiler--Anna-Tuchman--and-Song-Yao-discuss-Soda-Taxes-e29k49t" target="_blank" rel="noopener" data-host="brett">
         <div class="ep-thumb ep-thumb--romance"><span class="material-symbols-outlined">local_drink</span></div>
         <div class="ep-body">
           <div class="ep-title">Stephan Seiler, Anna Tuchman, and Song Yao Discuss Soda Taxes</div>
@@ -1050,7 +1112,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--2---Martin-Mende-and-Maura-Scott-talk-Service-Robots-e27rgo7" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--2---Martin-Mende-and-Maura-Scott-talk-Service-Robots-e27rgo7" target="_blank" rel="noopener" data-host="karen">
         <div class="ep-thumb ep-thumb--ai"><span class="material-symbols-outlined">smart_toy</span></div>
         <div class="ep-body">
           <div class="ep-title">Martin Mende and Maura Scott Talk Service Robots</div>
@@ -1060,7 +1122,7 @@ author_profile: true
         <div class="ep-play"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_circle</span></div>
       </a>
 
-      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--1---Judy-Chevalier-and-Dina-Mayzlin-on-Online-Reviews-e27rgg4" target="_blank" rel="noopener">
+      <a class="episode" href="https://podcasters.spotify.com/pod/show/hiwtpod/episodes/Ep--1---Judy-Chevalier-and-Dina-Mayzlin-on-Online-Reviews-e27rgg4" target="_blank" rel="noopener" data-host="brett">
         <div class="ep-thumb ep-thumb--grocery"><span class="material-symbols-outlined">reviews</span></div>
         <div class="ep-body">
           <div class="ep-title">Judy Chevalier and Dina Mayzlin on Online Reviews</div>
@@ -1073,6 +1135,24 @@ author_profile: true
   </section>
 
 </div>
+
+<script>
+  document.querySelector('.filter-bar').addEventListener('click', function(e) {
+    var btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+    var filter = btn.getAttribute('data-filter');
+    this.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    document.querySelectorAll('.episode-list .episode').forEach(function(ep) {
+      if (filter === 'all') {
+        ep.classList.remove('hidden');
+      } else {
+        var hosts = (ep.getAttribute('data-host') || '').split(' ');
+        ep.classList.toggle('hidden', hosts.indexOf(filter) === -1);
+      }
+    });
+  });
+</script>
 
 </body>
 </html>

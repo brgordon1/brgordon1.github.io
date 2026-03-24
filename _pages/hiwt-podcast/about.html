@@ -293,6 +293,17 @@ author_profile: true
     max-width: 560px;
   }
 
+  .info-text a {
+    color: var(--text-dim);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    transition: color 0.2s;
+  }
+
+  .info-text a:hover {
+    color: var(--accent);
+  }
+
   .listen-links {
     display: flex;
     gap: 0.6rem;
@@ -364,6 +375,9 @@ author_profile: true
       <a class="page-link active" href="{{ '/hiwt-podcast/about.html' | relative_url }}">
         <span class="material-symbols-outlined">info</span> About
       </a>
+      <a class="page-link" href="mailto:hiwtpod@gmail.com">
+        <span class="material-symbols-outlined">mail</span> Contact
+      </a>
     </nav>
   </div>
 </header>
@@ -433,6 +447,7 @@ author_profile: true
   <div class="podcast-info">
     <h3 class="info-title">Listen &amp; Subscribe</h3>
     <p class="info-text">New episodes are released monthly during the academic year. The podcast is available on all major platforms.</p>
+    <p class="info-text" style="margin-top: 1rem;">Questions, suggestions, or feedback? Drop us a line at <a class="styled-link" href="mailto:hiwtpod@gmail.com">hiwtpod@gmail.com</a>.</p>
     <div class="listen-links">
       <a class="listen-link" href="https://open.spotify.com/show/3LrmMlwz4gh4dV3eVufXvV" target="_blank" rel="noopener">
         <span class="material-symbols-outlined">play_circle</span> Spotify
