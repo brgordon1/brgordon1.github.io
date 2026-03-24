@@ -840,6 +840,7 @@ author_profile: true
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="brett">Brett</button>
       <button class="filter-btn" data-filter="karen">Karen</button>
+      <button class="filter-btn" data-filter="both">Brett &amp; Karen</button>
     </div>
 
     <div class="episode-list">
@@ -1144,10 +1145,12 @@ author_profile: true
     this.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
     btn.classList.add('active');
     document.querySelectorAll('.episode-list .episode').forEach(function(ep) {
+      var hosts = (ep.getAttribute('data-host') || '').split(' ');
       if (filter === 'all') {
         ep.classList.remove('hidden');
+      } else if (filter === 'both') {
+        ep.classList.toggle('hidden', !(hosts.indexOf('brett') !== -1 && hosts.indexOf('karen') !== -1));
       } else {
-        var hosts = (ep.getAttribute('data-host') || '').split(' ');
         ep.classList.toggle('hidden', hosts.indexOf(filter) === -1);
       }
     });
