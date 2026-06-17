@@ -30,14 +30,23 @@ author_profile: true
 
   /* Awards listed under a paper (only shown if the paper has them) */
   .archive__item-awards {
+    list-style: disc;
     font-size: 0.82em;
-    margin-top: -0.15em;
-    margin-bottom: 0.5em;
-    line-height: 1.45;
+    margin: -1em 0 1em 0;   /* pull up tight under the citation */
+    padding-left: 1.6em;    /* indent the list; room for bullets */
+    line-height: 1.5;
   }
-  .archive__item-awards i {
+  .archive__item-awards li {
+    margin: 0.1em 0;
+  }
+  /* Gold-icon mode (awards_icon: true): drop the bullet, show the icon instead */
+  .archive__item-awards.has-icon {
+    list-style: none;
+    padding-left: 0.3em;
+  }
+  .archive__item-awards.has-icon i {
     color: #d4a017; /* gold; legible on both light and dark themes */
-    margin-right: 0.35em;
+    margin-right: 0.4em;
   }
 </style>
 
