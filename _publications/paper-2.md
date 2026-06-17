@@ -11,7 +11,7 @@ citation: 'Gordon, B. R. (2009). &quot;A Dynamic Model of Consumer Replacement C
 awards:
   - "Winner, John D. C. Little Best Paper Award, INFORMS, 2009"
   - "Finalist, Frank M. Bass Dissertation Award, INFORMS, 2009"
-  - "Finalist, Long-Term Impact Award, INFORMS, 2017 & 2018"
+  - "Finalist, Donald G. Morrison Long-Term Impact Award, INFORMS, 2017 & 2018"
 ---
 
 This paper develops and estimates a dynamic model of consumer purchase timing decisions in the market for personal computer (PC) microprocessors. Consumers are forward looking and form expectations about the evolution of future product qualities and prices. A key feature of the model is that it allows for unobserved state dependence in the form of switching costs. Using household-level panel data on PC purchases, the model is estimated using a computationally tractable two-step estimation method. The estimates of the structural parameters are then used to analyze the determinants of the length of consumer replacement cycles and to conduct counterfactual policy experiments. The results indicate that consumers are forward looking and that quality improvements are the main driver of replacement purchases. In the counterfactual experiments, I find that a revenue-maximizing monopolist would vertically differentiate products less than is observed in the data and that this would significantly shorten the average time between consumer purchases.
