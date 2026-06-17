@@ -79,5 +79,13 @@
        {% comment %} --- Link for the preprint --- {% endcomment %}
     {% endif %}
 
+    {% if post.awards %}
+      <p class="archive__item-awards">
+        {% for award in post.awards %}
+          <span class="award">{% if site.awards_icon %}<i class="fa fa-award" aria-hidden="true"></i> {% endif %}{{ award | markdownify | remove: "<p>" | remove: "</p>" }}</span>{% unless forloop.last %}<br />{% endunless %}
+        {% endfor %}
+      </p>
+    {% endif %}
+
   </article>
 </div>

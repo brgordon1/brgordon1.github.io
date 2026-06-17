@@ -27,6 +27,18 @@ author_profile: true
   h2 + hr {
     margin-bottom: 1em !important;
   }
+
+  /* Awards listed under a paper (only shown if the paper has them) */
+  .archive__item-awards {
+    font-size: 0.82em;
+    margin-top: -0.15em;
+    margin-bottom: 0.5em;
+    line-height: 1.45;
+  }
+  .archive__item-awards i {
+    color: #d4a017; /* gold; legible on both light and dark themes */
+    margin-right: 0.35em;
+  }
 </style>
 
 {% if site.author.googlescholar %}
