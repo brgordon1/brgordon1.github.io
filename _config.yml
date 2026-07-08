@@ -26,13 +26,13 @@ author:
   name             : "Brett R. Gordon"
   pronouns         : #  "he/him"
   bio              : #"Brett Gordon is an Assistant Professor at Northwestern University."
-  location         : "Chicago, IL"
-  employer         : "Northwestern University"
+  location         : "Stanford, CA"
+  employer         : "Stanford University"
   uri              : #""
-  email            : "b-gordon@kellogg.northwestern.edu" 
+  email            : "brgordon@stanford.edu"
 
   # Academic websites
-  academia         : "https://www.kellogg.northwestern.edu/faculty/directory/gordon_brett/" 
+  academia         : "https://www.gsb.stanford.edu/faculty-research/faculty/brett-r-gordon"
   googlescholar    : "https://scholar.google.com/citations?user=iZnvpJYAAAAJ&hl=en"
   arxiv            : "https://arxiv.org/search/econ?query=Gordon%2C+Brett+R&searchtype=author&abstracts=show&order=-announced_date_first&size=50"
   inspire-hep      : # URL

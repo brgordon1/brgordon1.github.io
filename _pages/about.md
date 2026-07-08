@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Professor of Marketing at Northwestern University's Kellogg School of Management, where I hold the Charles H. Kellstadt Chair in Marketing. My research focuses on pricing, advertising, promotions, retailing and experimentation, using methods from causal inference, machine learning, and empirical industrial organization. I partner with companies to measure and enhance marketing effectiveness. My recent work examines digital advertising measurement methods while developing new evaluation approaches.
+I am the Robert A. Magowan Professor of Marketing at Stanford University's Graduate School of Business. My research focuses on pricing, advertising, promotions, retailing and experimentation, using methods from causal inference, machine learning, and empirical industrial organization. I partner with companies to measure and enhance marketing effectiveness. My recent work examines digital advertising measurement methods while developing new evaluation approaches.
 
 I am presently a co-editor at the [Journal of Marketing Research](https://journals.sagepub.com/home/mrj).
 
