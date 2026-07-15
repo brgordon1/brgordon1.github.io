@@ -1,7 +1,16 @@
-# How I Wrote This — episode list (newest first).
-# The first entry renders as the embedded 'latest episode' and drives the hero block,
-# so it must have a spotify_id and a short_title.
-# thumb: grocery | ai | romance | valuation | community | frugality
+# How I Wrote This — episode list (newest first), rendered by _pages/hiwt-podcast/index.html.
+#
+# The first entry is special: it renders the embedded Spotify player and drives the
+# hero block, so it must carry both spotify_id and short_title.
+#
+# To add an episode:
+#   1. python3 scripts/hiwt_check_feed.py     # reports anything new, with its Spotify ID
+#   2. add it as the new first entry
+#   3. delete the spotify_id line from the entry it displaced -- only the first
+#      entry may have one, or two players render
+#   4. python3 scripts/hiwt_check_feed.py --verify   # must report 0 problems
+#
+# thumb: grocery | ai | romance | valuation | community | frugality (colour themes only)
 # hosts: space-separated; 'brett', 'karen', or 'brett karen'
 
 - number: "30"
