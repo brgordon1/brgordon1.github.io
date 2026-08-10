@@ -13,6 +13,18 @@
 # thumb: grocery | ai | romance | valuation | community | frugality (colour themes only)
 # hosts: space-separated; 'brett', 'karen', or 'brett karen'
 
+- number: "31"
+  title: "From Rejection to Recognition: The Story Behind Two JMR Award-Winning Papers"
+  short_title: "From Rejection to Recognition"
+  date: "Aug 2026"
+  duration: "47 min"
+  hosts: "brett karen"
+  thumb: "grocery"
+  icon: "emoji_events"
+  url: "https://open.spotify.com/episode/0HcfpQslIZBeaJ4loLmWBu"
+  spotify_id: "0HcfpQslIZBeaJ4loLmWBu"
+  desc: "Recorded at Summer AMA with the 2026 JMR award winners: Shiri Melumad and Robert Meyer on how listening versus reading changes the way consumers interpret news, and Stephan Seiler and Anna Tuchman on why their soda-tax paper found an audience across marketing, economics, and public health."
+
 - number: "30"
   title: "The Next Chapter at JMR: A Conversation with Raphael Thomadsen"
   short_title: "The Next Chapter at JMR"
@@ -22,7 +34,6 @@
   thumb: "valuation"
   icon: "auto_stories"
   url: "https://open.spotify.com/episode/4PzrJ36RP3Vs12IYjVH0sw"
-  spotify_id: "4PzrJ36RP3Vs12IYjVH0sw"
   desc: "Brett and Karen talk with incoming JMR Editor-in-Chief Raphael Thomadsen about the new team&rsquo;s vision for the journal: streamlining the revision process, accepting shorter-form articles, and bridging behavioral, managerial, and quantitative work."
 
 - number: "29"
