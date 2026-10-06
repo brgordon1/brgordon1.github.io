@@ -13,6 +13,18 @@
 # thumb: grocery | ai | romance | valuation | community | frugality (colour themes only)
 # hosts: space-separated; 'brett', 'karen', or 'brett karen'
 
+- number: "32"
+  title: "Untangling Colorism with Tanuka Ghoshal and Tripat Gill"
+  short_title: "Untangling Colorism"
+  date: "Sep 2026"
+  duration: "55 min"
+  hosts: "karen"
+  thumb: "community"
+  icon: "diversity_3"
+  url: "https://open.spotify.com/episode/1YQ1XXvkeaCdShUfCYFsnR"
+  spotify_id: "1YQ1XXvkeaCdShUfCYFsnR"
+  desc: "Karen talks with Tanuka Ghoshal and Tripat Gill about their paper on skin tone and perceptions of service providers in India. Despite the documented fair-skin premium, darker-skinned professionals are seen as more hardworking, and so more competent, in financial and technical services. The conversation also covers eight years and seven rounds of revision, and the costs of collecting quality data in India."
+
 - number: "31"
   title: "From Rejection to Recognition: The Story Behind Two JMR Award-Winning Papers"
   short_title: "From Rejection to Recognition"
@@ -22,7 +34,6 @@
   thumb: "grocery"
   icon: "emoji_events"
   url: "https://open.spotify.com/episode/0HcfpQslIZBeaJ4loLmWBu"
-  spotify_id: "0HcfpQslIZBeaJ4loLmWBu"
   desc: "Recorded at Summer AMA with the 2026 JMR award winners: Shiri Melumad and Robert Meyer on how listening versus reading changes the way consumers interpret news, and Stephan Seiler and Anna Tuchman on why their soda-tax paper found an audience across marketing, economics, and public health."
 
 - number: "30"
